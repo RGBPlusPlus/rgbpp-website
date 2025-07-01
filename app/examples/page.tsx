@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowLeft, ArrowRight, FileText, Play, Copy, Bitcoin, Layers, Globe, Clock } from "lucide-react"
 import Link from "next/link"
+import Header from "@/components/header"
 
 export default function ExamplesPage() {
   return (
@@ -35,34 +36,7 @@ export default function ExamplesPage() {
         ))}
       </div>
 
-      {/* Header */}
-      <header className="border-b border-white/10 bg-black/20 backdrop-blur-xl sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <FileText className="h-8 w-8 text-orange-400 group-hover:scale-110 transition-transform duration-300" />
-                <div className="absolute inset-0 h-8 w-8 text-orange-400 animate-ping opacity-20">
-                  <FileText className="h-8 w-8" />
-                </div>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-                  RGB++ Examples
-                </h1>
-                <p className="text-xs text-gray-400">Use Cases & Implementation</p>
-              </div>
-            </Link>
-            <Link
-              href="/"
-              className="text-gray-300 hover:text-orange-400 transition-all duration-300 hover:scale-105 group"
-            >
-              <ArrowLeft className="h-4 w-4 inline mr-1 group-hover:-translate-x-1 transition-transform duration-300" />
-              Back to Home
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
         {/* Breadcrumb */}
@@ -583,6 +557,7 @@ unlockTimeLock();`}
           </Link>
         </div>
       </div>
+      
     </div>
   )
 }

@@ -7,40 +7,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowRight, Book, Code, Terminal, FileText, GitBranch, Layers, Shield, ExternalLink, Activity, Box, Link2, Database, Zap, Copy, CheckCircle, Users, Network } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
-// RGB++ Logo SVG Component
-const RgbppIcon = ({ className = "w-8 h-8" }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clipPath="url(#clip0_430_320)">
-      <g style={{ mixBlendMode: 'screen' as const }}>
-        <path fillRule="evenodd" clipRule="evenodd" d="M37.6026 7.13041C38.3735 10.0075 36.6661 12.9648 33.789 13.7357L2.53245 22.1109C-0.344637 22.8818 -3.30193 21.1744 -4.07284 18.2973C-4.84375 15.4202 -3.13636 12.4629 -0.259271 11.692L30.9973 3.31685C33.8744 2.54593 36.8317 4.25332 37.6026 7.13041Z" fill="url(#paint0_linear_430_320)" />
-      </g>
-      <g style={{ mixBlendMode: 'screen' as const }}>
-        <path fillRule="evenodd" clipRule="evenodd" d="M5.7126 35.2364C3.60642 33.1302 3.60642 29.7155 5.7126 27.6093L28.594 4.72788C30.7002 2.62171 34.115 2.6217 36.2211 4.72788C38.3273 6.83405 38.3273 10.2488 36.2211 12.355L13.3397 35.2364C11.2336 37.3426 7.81878 37.3426 5.7126 35.2364Z" fill="url(#paint1_linear_430_320)" />
-      </g>
-      <g style={{ mixBlendMode: 'screen' as const }}>
-        <path fillRule="evenodd" clipRule="evenodd" d="M22.6218 44.9925C19.7447 44.2216 18.0373 41.2643 18.8082 38.3873L27.1834 7.13068C27.9543 4.25359 30.9116 2.5462 33.7887 3.31711C36.6658 4.08802 38.3732 7.04531 37.6023 9.9224L29.2271 41.179C28.4562 44.0561 25.4989 45.7635 22.6218 44.9925Z" fill="url(#paint2_linear_430_320)" />
-      </g>
-    </g>
-    <defs>
-      <linearGradient id="paint0_linear_430_320" x1="32.3888" y1="8.51" x2="1.13223" y2="16.8852" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#F3674F" />
-        <stop offset="1" stopColor="#F3674F" stopOpacity="0" />
-      </linearGradient>
-      <linearGradient id="paint1_linear_430_320" x1="32.4195" y1="8.55337" x2="9.53808" y2="31.4348" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#38E539" />
-        <stop offset="1" stopColor="#38E539" stopOpacity="0" />
-      </linearGradient>
-      <linearGradient id="paint2_linear_430_320" x1="32.4091" y1="8.5309" x2="24.0339" y2="39.7875" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#0166FF" />
-        <stop offset="1" stopColor="#0166FF" stopOpacity="0" />
-      </linearGradient>
-      <clipPath id="clip0_430_320">
-        <rect width="40" height="40" fill="white" />
-      </clipPath>
-    </defs>
-  </svg>
-)
+
 
 export default function HomePage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
@@ -81,31 +51,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white">
-      {/* Header */}
-      <header className="border-b border-gray-800/50 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="p-1 rounded-lg bg-gradient-to-r from-orange-500/20 via-green-500/20 to-blue-500/20 group-hover:from-orange-500/30 group-hover:via-green-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-                <RgbppIcon className="w-8 h-8" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">RGB++</h1>
-                <p className="text-xs text-gray-400">Bitcoin Layer 2 Protocol</p>
-              </div>
-            </Link>
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/introduction" className="text-gray-300 hover:text-orange-400 transition-colors">
-                Documentation
-              </Link>
-              <a href="https://github.com/ckb-cell/rgbpp" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors flex items-center space-x-1">
-                <span>GitHub</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="py-20 px-6 relative overflow-hidden">
@@ -450,71 +396,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-700/50 bg-gradient-to-b from-gray-950 to-black relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/2 via-green-500/2 to-blue-500/2 blur-3xl"></div>
-        <div className="container mx-auto px-6 py-12 relative">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4 group">
-                <div className="p-1 rounded-lg bg-gradient-to-r from-orange-500/20 via-green-500/20 to-blue-500/20 group-hover:from-orange-500/30 group-hover:via-green-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-                  <RgbppIcon className="w-8 h-8" />
-                </div>
-                <div>
-                  <div className="bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent font-bold">RGB++</div>
-                  <div className="text-gray-400 text-sm">Protocol</div>
-                </div>
-              </div>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Bitcoin Layer 2 Protocol for programmable assets and smart contracts.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-4">Documentation</h3>
-              <ul className="space-y-2">
-                <li><Link href="/introduction" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Introduction</Link></li>
-                <li><Link href="/quickstart" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Quick Start</Link></li>
-                <li><Link href="/concepts" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Core Concepts</Link></li>
-                <li><Link href="/source-code" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Resources</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-4">Tools</h3>
-              <ul className="space-y-2">
-                <li><a href="https://explorer.rgbpp.io" className="text-gray-400 hover:text-green-400 text-sm transition-colors">Explorer</a></li>
-                <li><a href="https://testnet.rgbpp.io" className="text-gray-400 hover:text-green-400 text-sm transition-colors">Testnet</a></li>
-                <li><a href="https://faucet.rgbpp.io" className="text-gray-400 hover:text-green-400 text-sm transition-colors">Faucet</a></li>
-                <li><a href="https://github.com/ckb-cell/rgbpp" className="text-gray-400 hover:text-green-400 text-sm transition-colors">GitHub</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-4">Community</h3>
-              <ul className="space-y-2">
-                <li><a href="https://discord.gg/rgbpp" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Discord</a></li>
-                <li><a href="https://t.me/rgbpp_protocol" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Telegram</a></li>
-                <li><a href="https://twitter.com/rgbpp_protocol" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Twitter</a></li>
-                <li><a href="https://blog.rgbpp.io" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Blog</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700/30 mt-12 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="text-gray-400 text-sm">
-                © 2024 RGB++ Protocol. All rights reserved.
-              </div>
-              <div className="flex space-x-6 text-sm mt-4 md:mt-0">
-                <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">Privacy</a>
-                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Terms</a>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Security</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
