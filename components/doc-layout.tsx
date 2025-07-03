@@ -1,7 +1,8 @@
 "use client"
 
-import { ReactNode, useState } from "react"
+import { ReactNode, useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Network, Book, Zap, Cpu, FileText, Code, Layers, ArrowLeft, Lock, Shield, Server, Hash, Database, Link as LinkIcon, Menu, X, ChevronDown, ChevronRight } from "lucide-react"
 import Header from "./header"
@@ -62,6 +63,17 @@ const navigationItems = [
 export function DocLayout({ children, title, description }: DocLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [expandedSection, setExpandedSection] = useState(0) // 默认展开第一列
+  const pathname = usePathname()
+
+  // 根据当前路径自动展开对应的分组
+  useEffect(() => {
+    const currentSectionIndex = navigationItems.findIndex(section =>
+      section.items.some(item => item.href === pathname)
+    )
+    if (currentSectionIndex !== -1) {
+      setExpandedSection(currentSectionIndex)
+    }
+  }, [pathname])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black">
@@ -79,7 +91,7 @@ export function DocLayout({ children, title, description }: DocLayoutProps) {
 
         {/* Sidebar */}
         <aside className={cn(
-          "fixed lg:static inset-y-0 left-0 z-50 w-64 h-screen overflow-y-auto bg-gray-900/80 backdrop-blur-sm border-r border-gray-800/30 transition-transform duration-300 ease-in-out",
+          "sticky inset-y-0 left-0 z-50 w-64 h-screen overflow-y-auto bg-gray-900/80 backdrop-blur-sm border-r border-gray-800/30 transition-transform duration-300 ease-in-out",
           "lg:translate-x-0 lg:top-[73px]",
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}>
@@ -104,21 +116,29 @@ export function DocLayout({ children, title, description }: DocLayoutProps) {
                     isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   )}>
                     <ul className="space-y-1 pt-2">
-                      {section.items.map((item, itemIndex) => (
-                        <li key={itemIndex}>
-                          <Link
-                            href={item.href}
-                            onClick={() => setSidebarOpen(false)}
-                            className={cn(
-                              "flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors duration-200",
-                              "text-gray-300 hover:text-white hover:bg-gray-800/50"
-                            )}
-                          >
-                            <item.icon className="h-4 w-4 text-gray-500" />
-                            <span>{item.title}</span>
-                          </Link>
-                        </li>
-                      ))}
+                      {section.items.map((item, itemIndex) => {
+                        const isActive = pathname === item.href;
+                        return (
+                          <li key={itemIndex}>
+                            <Link
+                              href={item.href}
+                              onClick={() => setSidebarOpen(false)}
+                              className={cn(
+                                "flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors duration-200",
+                                isActive 
+                                  ? "text-white bg-orange-500/20 border border-orange-500/30" 
+                                  : "text-gray-300 hover:text-white hover:bg-gray-800/50"
+                              )}
+                            >
+                              <item.icon className={cn(
+                                "h-4 w-4",
+                                isActive ? "text-orange-400" : "text-gray-500"
+                              )} />
+                              <span>{item.title}</span>
+                            </Link>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>
