@@ -198,13 +198,13 @@ export default function QuickStartPage() {
                 </pre>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <Button size="sm" variant="outline" className="border-gray-600 text-gray-300">
-                  <ExternalLink className="h-4 w-4 mr-1" />
+              <div className="flex items-center flex-wrap gap-4 justify-start">
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 mt-2">
+                  <ExternalLink className="h-4 w-4 mr-1 " />
                   View Bitcoin Transaction
                 </Button>
-                <Button size="sm" variant="outline" className="border-gray-600 text-gray-300">
-                  <ExternalLink className="h-4 w-4 mr-1" />
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 mt-2">
+                  <ExternalLink className="h-4 w-4 mr-1 " />
                   View CKB Transaction
                 </Button>
               </div>
