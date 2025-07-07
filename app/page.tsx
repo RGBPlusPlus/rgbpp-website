@@ -54,7 +54,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 px-6 relative overflow-hidden">
+      <section className="py-10 px-2 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-green-500/5 to-blue-500/5 blur-3xl"></div>
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
@@ -103,7 +103,7 @@ export default function HomePage() {
       </section>
 
       {/* How RGB++ Works */}
-      <section className="py-20 px-6 bg-gradient-to-b from-gray-900/50 to-gray-950/50 relative">
+      <section className="py-10 px-2 bg-gradient-to-b from-gray-900/50 to-gray-950/50 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/3 via-green-500/3 to-blue-500/3 blur-3xl"></div>
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
@@ -166,7 +166,7 @@ export default function HomePage() {
 
 
       {/* Protocol Comparison */}
-      <section className="py-20 px-6 bg-gradient-to-b from-gray-950/50 to-black/50 relative">
+      <section className="py-10 px-2 bg-gradient-to-b from-gray-950/50 to-black/50 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/2 via-green-500/2 to-blue-500/2 blur-3xl"></div>
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-12">
@@ -180,39 +180,39 @@ export default function HomePage() {
             <table className="w-full border border-gray-700/50 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/40 backdrop-blur-sm shadow-2xl">
               <thead className="bg-gradient-to-r from-gray-800/80 to-gray-700/60">
                 <tr>
-                  <th className="px-6 py-4 text-left text-white font-medium">Feature</th>
-                  <th className="px-6 py-4 text-center text-white font-medium">RGB++</th>
-                  <th className="px-6 py-4 text-center text-white font-medium">Traditional RGB</th>
+                  <th className="py-1 px-2 lg:px-6 lg:py-4 text-left text-white lg:font-sm font-medium ">Feature</th>
+                  <th className="py-1 px-2 lg:px-6 lg:py-4 text-center text-white lg:font-sm font-medium ">RGB++</th>
+                  <th className="py-1 px-2 lg:px-6 lg:py-4 text-center text-white lg:font-sm font-medium ">Traditional RGB</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-700/30">
                 <tr className="hover:bg-gradient-to-r hover:from-orange-500/5 hover:to-green-500/5 transition-all duration-300">
-                  <td className="px-6 py-4 text-gray-200">Validation</td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-gray-200">Validation</td>
+                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mx-auto drop-shadow-lg" />
                     <span className="text-sm text-gray-200 block mt-1">On-chain</span>
                   </td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
                     <span className="text-sm text-gray-400">Client-side</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-gradient-to-r hover:from-green-500/5 hover:to-blue-500/5 transition-all duration-300">
-                  <td className="px-6 py-4 text-gray-200">Data Availability</td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-gray-200">Data Availability</td>
+                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mx-auto drop-shadow-lg" />
                     <span className="text-sm text-gray-200 block mt-1">Public on CKB</span>
                   </td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
                     <span className="text-sm text-gray-400">Private/Local</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-orange-500/5 transition-all duration-300">
-                  <td className="px-6 py-4 text-gray-200">Usability</td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-gray-200">Usability</td>
+                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mx-auto drop-shadow-lg" />
                     <span className="text-sm text-gray-200 block mt-1">User-friendly</span>
                   </td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
                     <span className="text-sm text-gray-400">Complex</span>
                   </td>
                 </tr>
@@ -223,7 +223,7 @@ export default function HomePage() {
       </section>
 
       {/* Ecosystem Partners */}
-      <section className="py-20 px-4 relative overflow-hidden bg-gradient-to-b from-black/50 to-gray-950/80">
+      <section className="py-10 px-2 relative overflow-hidden bg-gradient-to-b from-black/50 to-gray-950/80">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-green-500/5 to-blue-500/5 blur-3xl"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(243,103,79,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(56,229,57,0.1),transparent_50%)]"></div>
@@ -286,7 +286,7 @@ export default function HomePage() {
               ></div>
 
               {/* Modal Content */}
-              <div className="relative bg-gradient-to-br from-gray-900/95 to-gray-800/90 backdrop-blur-xl border border-gray-600/30 rounded-3xl max-w-6xl w-full max-h-[80vh] overflow-hidden animate-in zoom-in-95 duration-500 shadow-2xl shadow-gray-900/50">
+              <div className="relative bg-gradient-to-br from-gray-900/95 to-gray-800/90 backdrop-blur-xl border border-gray-600/30 rounded-3xl  w-full max-h-[80vh] overflow-hidden animate-in zoom-in-95 duration-500 shadow-2xl shadow-gray-900/50">
                 {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-gray-700/30">
                   <div>

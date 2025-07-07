@@ -3,7 +3,8 @@
 import Link from "next/link";
 import LogoIcon from "@/components/ui/logoIcon";
 import { ExternalLink, Menu, X, Book, Code, Lock, Shield, Link as LinkIcon, Layers, Network, Server, Zap, Hash, Database, FileText, ChevronDown, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 // 导航数据结构
@@ -56,6 +57,17 @@ const navigationItems = [
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState(0); // 默认展开第一列
+  const pathname = usePathname();
+
+  // 根据当前路径自动展开对应的分组
+  useEffect(() => {
+    const currentSectionIndex = navigationItems.findIndex(section =>
+      section.items.some(item => item.href === pathname)
+    );
+    if (currentSectionIndex !== -1) {
+      setExpandedSection(currentSectionIndex);
+    }
+  }, [pathname]);
     
   return (
     <>
@@ -78,7 +90,12 @@ export default function Header() {
             <nav className="hidden md:flex items-center space-x-8">
               <Link
                 href="/introduction"
-                className="text-gray-300 hover:text-orange-400 transition-colors"
+                className={cn(
+                  "transition-colors",
+                  pathname === "/introduction" 
+                    ? "text-orange-400" 
+                    : "text-gray-300 hover:text-orange-400"
+                )}
               >
                 Documentation
               </Link>
@@ -138,30 +155,6 @@ export default function Header() {
 
             {/* Navigation Content */}
             <div className="flex-1 overflow-y-auto">
-              {/* Quick Links */}
-              {/* <div className="p-6 border-b border-gray-700/30">
-                <div className="space-y-3">
-                  <Link
-                    href="/introduction"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center justify-center space-x-2 text-lg font-semibold text-gray-300 hover:text-orange-400 transition-colors py-3 px-4 rounded-xl bg-gray-800/30 hover:bg-gray-700/50"
-                  >
-                    <Book className="w-5 h-5" />
-                    <span>Documentation</span>
-                  </Link>
-                  <a
-                    href="https://github.com/ckb-cell/rgbpp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center justify-center space-x-2 text-lg font-semibold text-gray-300 hover:text-blue-400 transition-colors py-3 px-4 rounded-xl bg-gray-800/30 hover:bg-gray-700/50"
-                  >
-                    <span>GitHub</span>
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                </div>
-              </div> */}
-
               {/* Full Navigation Menu */}
               <div className="p-6">
                 {navigationItems.map((section, sectionIndex) => {
@@ -184,20 +177,28 @@ export default function Header() {
                         isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                       )}>
                         <div className="space-y-2 pt-2">
-                          {section.items.map((item, itemIndex) => (
-                            <Link
-                              key={itemIndex}
-                              href={item.href}
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              className={cn(
-                                "flex items-center space-x-3 px-4 py-3 rounded-xl text-base transition-all duration-200",
-                                "text-gray-300 hover:text-white hover:bg-gray-800/50 hover:scale-105"
-                              )}
-                            >
-                              <item.icon className="h-5 w-5 text-gray-500 flex-shrink-0" />
-                              <span className="font-medium">{item.title}</span>
-                            </Link>
-                          ))}
+                          {section.items.map((item, itemIndex) => {
+                            const isActive = pathname === item.href;
+                            return (
+                              <Link
+                                key={itemIndex}
+                                href={item.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className={cn(
+                                  "flex items-center space-x-3 px-4 py-3 rounded-xl text-base transition-all duration-200",
+                                  isActive 
+                                    ? "text-white bg-orange-500/20 border border-orange-500/30" 
+                                    : "text-gray-300 hover:text-white hover:bg-gray-800/50 hover:scale-105"
+                                )}
+                              >
+                                <item.icon className={cn(
+                                  "h-5 w-5 flex-shrink-0",
+                                  isActive ? "text-orange-400" : "text-gray-500"
+                                )} />
+                                <span className="font-medium">{item.title}</span>
+                              </Link>
+                            );
+                          })}
                         </div>
                       </div>
                     </div>

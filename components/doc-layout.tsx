@@ -91,7 +91,7 @@ export function DocLayout({ children, title, description }: DocLayoutProps) {
 
         {/* Sidebar */}
         <aside className={cn(
-          "sticky inset-y-0 left-0 z-50 w-64 h-screen overflow-y-auto bg-gray-900/80 backdrop-blur-sm border-r border-gray-800/30 transition-transform duration-300 ease-in-out",
+          "hidden lg:sticky  inset-y-0 left-0 z-50 w-64 h-screen overflow-y-auto bg-gray-900/80 backdrop-blur-sm border-r border-gray-800/30 transition-transform duration-300 ease-in-out",
           "lg:translate-x-0 lg:top-[73px]",
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}>
@@ -148,7 +148,7 @@ export function DocLayout({ children, title, description }: DocLayoutProps) {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 min-h-screen w-full">
+        <main className="flex-1 min-h-screen w-full px-4">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
             {/* Breadcrumb */}
             <div className="flex items-center space-x-2 text-sm text-gray-400 mb-6 sm:mb-8">
