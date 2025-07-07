@@ -91,9 +91,9 @@ export function DocLayout({ children, title, description }: DocLayoutProps) {
 
         {/* Sidebar */}
         <aside className={cn(
-          "hidden lg:sticky  inset-y-0 left-0 z-50 w-64 h-screen overflow-y-auto bg-gray-900/80 backdrop-blur-sm border-r border-gray-800/30 transition-transform duration-300 ease-in-out",
+          " hidden lg:block sticky inset-y-0 left-0 z-50 w-64 h-screen overflow-y-auto bg-gray-900/80 backdrop-blur-sm border-r border-gray-800/30 transition-transform duration-300 ease-in-out",
           "lg:translate-x-0 lg:top-[73px]",
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          sidebarOpen ? "-translate-x-0" : "-translate-x-full "
         )}>
           <nav className="p-6">
             {navigationItems.map((section, sectionIndex) => {
