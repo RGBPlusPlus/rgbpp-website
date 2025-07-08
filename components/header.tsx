@@ -68,7 +68,7 @@ export default function Header() {
       setExpandedSection(currentSectionIndex);
     }
   }, [pathname]);
-    
+
   return (
     <>
       <header className="border-b border-gray-800/50 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
@@ -85,22 +85,22 @@ export default function Header() {
                 <p className="text-xs text-gray-400">Bitcoin Layer 2 Protocol</p>
               </div>
             </Link>
-            
+
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <Link
                 href="/introduction"
                 className={cn(
                   "transition-colors",
-                  pathname === "/introduction" 
-                    ? "text-orange-400" 
+                  pathname === "/introduction"
+                    ? "text-orange-400"
                     : "text-gray-300 hover:text-orange-400"
                 )}
               >
                 Documentation
               </Link>
               <a
-                href="https://github.com/ckb-cell/rgbpp"
+                href="https://github.com/RGBPlusPlus"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-blue-400 transition-colors flex items-center space-x-1"
@@ -125,11 +125,11 @@ export default function Header() {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
           {/* Backdrop */}
-          <div 
+          <div
             className="absolute inset-0 bg-black/80 backdrop-blur-sm"
             onClick={() => setIsMobileMenuOpen(false)}
           />
-          
+
           {/* Menu Content */}
           <div className="absolute inset-0 flex flex-col bg-gray-900/95">
             {/* Header */}
@@ -186,8 +186,8 @@ export default function Header() {
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className={cn(
                                   "flex items-center space-x-3 px-4 py-3 rounded-xl text-base transition-all duration-200",
-                                  isActive 
-                                    ? "text-white bg-orange-500/20 border border-orange-500/30" 
+                                  isActive
+                                    ? "text-white bg-orange-500/20 border border-orange-500/30"
                                     : "text-gray-300 hover:text-white hover:bg-gray-800/50 hover:scale-105"
                                 )}
                               >

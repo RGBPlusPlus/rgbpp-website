@@ -225,10 +225,12 @@ export default function RGBPPSDKPage() {
                 </div>
 
                 <div className="space-y-3">
-                  <Button className="w-full bg-green-500 hover:bg-green-600">
-                    <GitBranch className="h-4 w-4 mr-2" />
-                    View Primary SDK Repository
-                  </Button>
+                  <a href="https://github.com/ckb-devrel/ccc/tree/rgbpp-sdk" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-green-500 hover:bg-green-600">
+                      <GitBranch className="h-4 w-4 mr-2" />
+                      View Primary SDK Repository
+                    </Button>
+                  </a>
                   <p className="text-xs text-gray-400 text-center">
                     https://github.com/ckb-devrel/ccc/tree/rgbpp-sdk
                   </p>
@@ -264,10 +266,12 @@ export default function RGBPPSDKPage() {
                 </div>
 
                 <div className="space-y-3">
-                  <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                    <GitBranch className="h-4 w-4 mr-2" />
-                    View Legacy SDK Repository
-                  </Button>
+                  <a href="https://github.com/RGBPlusPlus/rgbpp-sdk" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                      <GitBranch className="h-4 w-4 mr-2" />
+                      View Legacy SDK Repository
+                    </Button>
+                  </a>
                   <p className="text-xs text-gray-400 text-center">
                     https://github.com/RGBPlusPlus/rgbpp-sdk
                   </p>

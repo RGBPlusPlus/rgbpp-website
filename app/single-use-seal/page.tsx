@@ -206,10 +206,12 @@ export default function SingleUseSealPage() {
                   For a comprehensive explanation of single-use seals and their theoretical foundation,
                   please refer to Peter Todd's seminal technical article.
                 </p>
-                <Button variant="outline" className="border-yellow-500/30 text-yellow-300 hover:bg-yellow-500/10">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  State Machine Consensus Building Blocks
-                </Button>
+                <a href="https://petertodd.org/2016/state-machine-consensus-building-blocks#uniqueness-and-single-use-seals" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-yellow-500/30 text-yellow-300 hover:bg-yellow-500/10">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    State Machine Consensus Building Blocks
+                  </Button>
+                </a>
               </div>
             </CardContent>
           </Card>

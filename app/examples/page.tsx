@@ -273,7 +273,7 @@ transferUDT();`}
                           <Copy className="h-4 w-4 mr-2" />
                           Copy
                         </Button>
-                        <Link href="https://mempool.space/tx/YOUR_BITCOIN_TX_ID" target="_blank">
+                        <Link href="https://mempool.space/tx/4cc01a7f14b1196b5be149f3c7a1d3742e6c5c60f1097641ad9eeb64ff83d44d" target="_blank">
                           <Button
                             variant="glass"
                             size="sm"
@@ -368,7 +368,7 @@ bitcoinBasedTransfer();`}
                           <Copy className="h-4 w-4 mr-2" />
                           Copy
                         </Button>
-                        <Link href="https://explorer.nervos.org/transaction/YOUR_CKB_TX_ID" target="_blank">
+                        <Link href="https://explorer.nervos.org/transaction/0xbf357ba27be87b368ba27e83a60bc4f0e32810634100dc5b2da3e93a4b9ca7fa" target="_blank">
                           <Button
                             variant="glass"
                             size="sm"
@@ -465,7 +465,7 @@ leapToCKB();`}
                           <Copy className="h-4 w-4 mr-2" />
                           Copy
                         </Button>
-                        <Link href="https://rgbpp.space/tx/YOUR_RGBPP_TX_ID" target="_blank">
+                        <Link href="https://explorer.nervos.org/transaction/0x8a6d5d952614c583722052ec5d58dc8a2acf3e96f8c11825385cf4317abdba9d" target="_blank">
                           <Button
                             variant="glass"
                             size="sm"
@@ -557,7 +557,7 @@ unlockTimeLock();`}
           </Link>
         </div>
       </div>
-      
+
     </div>
   )
 }

@@ -286,10 +286,12 @@ export default function SPVServicePage() {
                     Design Documentation
                   </h4>
                   <div className="space-y-3">
-                    <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      CKB Bitcoin SPV Design
-                    </Button>
+                    <a href="https://github.com/RGBPlusPlus/RGBPlusPlus-design/blob/main/docs/ckb-bitcoin-spv-design.md" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        CKB Bitcoin SPV Design
+                      </Button>
+                    </a>
                   </div>
                 </div>
 
@@ -299,18 +301,24 @@ export default function SPVServicePage() {
                     Implementation
                   </h4>
                   <div className="space-y-3">
-                    <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
-                      <GitBranch className="h-4 w-4 mr-2" />
-                      SPV Type Script Contracts
-                    </Button>
-                    <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
-                      <GitBranch className="h-4 w-4 mr-2" />
-                      Bitcoin SPV Library
-                    </Button>
-                    <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
-                      <GitBranch className="h-4 w-4 mr-2" />
-                      CKB Bitcoin SPV Service
-                    </Button>
+                    <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv-contracts" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
+                        <GitBranch className="h-4 w-4 mr-2" />
+                        SPV Type Script Contracts
+                      </Button>
+                    </a>
+                    <a href="https://github.com/RGBPlusPlus/bitcoin-spv" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
+                        <GitBranch className="h-4 w-4 mr-2" />
+                        Bitcoin SPV Library
+                      </Button>
+                    </a>
+                    <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv-service" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
+                        <GitBranch className="h-4 w-4 mr-2" />
+                        CKB Bitcoin SPV Service
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>

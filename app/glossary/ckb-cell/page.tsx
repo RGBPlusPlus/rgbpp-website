@@ -75,10 +75,12 @@ export default function CKBCellPage() {
 
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">External Resources</h3>
-              <Button variant="outline" className="border-green-500/30 text-green-300 hover:bg-green-500/10">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                View CKB Cell Model Documentation
-              </Button>
+              <a href="https://docs.nervos.org/docs/tech-explanation/cell-model" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-green-500/30 text-green-300 hover:bg-green-500/10">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  View CKB Cell Model Documentation
+                </Button>
+              </a>
             </div>
           </CardContent>
         </Card>

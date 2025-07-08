@@ -219,10 +219,12 @@ export default function BTCAssetsAPIPage() {
                     <p className="text-green-200 text-sm leading-relaxed mb-3">
                       For production applications, access instructions are available in the btc-assets-api repository.
                     </p>
-                    <Button variant="outline" className="border-green-500/30 text-green-300 hover:bg-green-500/10 text-xs">
-                      <ExternalLink className="h-3 w-3 mr-2" />
-                      View Mainnet Instructions
-                    </Button>
+                    <a href="https://github.com/RGBPlusPlus/btc-assets-api?tab=readme-ov-file#mainnet" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="border-green-500/30 text-green-300 hover:bg-green-500/10 text-xs">
+                        <ExternalLink className="h-3 w-3 mr-2" />
+                        View Mainnet Instructions
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -357,14 +359,18 @@ export default function BTCAssetsAPIPage() {
                     Repository & Documentation
                   </h4>
                   <div className="space-y-3">
-                    <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                      <GitBranch className="h-4 w-4 mr-2" />
-                      btc-assets-api Repository
-                    </Button>
-                    <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      API Documentation
-                    </Button>
+                    <a href="https://github.com/RGBPlusPlus/btc-assets-api" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                        <GitBranch className="h-4 w-4 mr-2" />
+                        btc-assets-api Repository
+                      </Button>
+                    </a>
+                    <a href="https://github.com/RGBPlusPlus/btc-assets-api#api-documentation" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        API Documentation
+                      </Button>
+                    </a>
                   </div>
                 </div>
 
@@ -374,14 +380,18 @@ export default function BTCAssetsAPIPage() {
                     Support & Community
                   </h4>
                   <div className="space-y-3">
-                    <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Community Discord
-                    </Button>
-                    <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Developer Forum
-                    </Button>
+                    <a href="https://github.com/RGBPlusPlus/btc-assets-api/discussions" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        GitHub Discussions
+                      </Button>
+                    </a>
+                    <a href="https://talk.nervos.org/t/rgb-protocol-light-paper/7733" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Developer Forum
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>

@@ -128,10 +128,12 @@ export default function MerkleRootPage() {
 
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">External Resources</h3>
-              <Button variant="outline" className="border-red-500/30 text-red-300 hover:bg-red-500/10">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Bitcoin Developer Reference
-              </Button>
+              <a href="https://developer.bitcoin.org/reference/block_chain.html#merkle-trees" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-red-500/30 text-red-300 hover:bg-red-500/10">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Bitcoin Developer Reference
+                </Button>
+              </a>
             </div>
           </CardContent>
         </Card>

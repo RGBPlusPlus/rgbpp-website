@@ -101,10 +101,12 @@ export default function ConceptsPage() {
                 <p className="text-blue-200 text-sm mb-4">
                   For a comprehensive explanation of single-use seals, please refer to this technical article by Peter Todd.
                 </p>
-                <Button variant="outline" className="border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  State Machine Consensus Building Blocks
-                </Button>
+                <a href="https://petertodd.org/2016/state-machine-consensus-building-blocks#uniqueness-and-single-use-seals" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    State Machine Consensus Building Blocks
+                  </Button>
+                </a>
               </div>
             </CardContent>
           </Card>

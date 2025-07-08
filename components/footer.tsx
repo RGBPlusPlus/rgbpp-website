@@ -37,19 +37,19 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Tools</h3>
             <ul className="space-y-2">
               <li><a href="https://explorer.rgbpp.io" className="text-gray-400 hover:text-green-400 text-sm transition-colors">Explorer</a></li>
-              <li><a href="https://testnet.rgbpp.io" className="text-gray-400 hover:text-green-400 text-sm transition-colors">Testnet</a></li>
-              <li><a href="https://faucet.rgbpp.io" className="text-gray-400 hover:text-green-400 text-sm transition-colors">Faucet</a></li>
-              <li><a href="https://github.com/ckb-cell/rgbpp" className="text-gray-400 hover:text-green-400 text-sm transition-colors">GitHub</a></li>
+              <li><Link href="/btc-assets-api" className="text-gray-400 hover:text-green-400 text-sm transition-colors">API Docs</Link></li>
+              <li><Link href="/rgbpp-sdk" className="text-gray-400 hover:text-green-400 text-sm transition-colors">RGB++ SDK</Link></li>
+              <li><a href="https://github.com/RGBPlusPlus/rgbpp" className="text-gray-400 hover:text-green-400 text-sm transition-colors">GitHub</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-white font-semibold mb-4">Community</h3>
             <ul className="space-y-2">
-              <li><a href="https://discord.gg/rgbpp" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Discord</a></li>
-              <li><a href="https://t.me/rgbpp_protocol" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Telegram</a></li>
-              <li><a href="https://twitter.com/rgbpp_protocol" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Twitter</a></li>
-              <li><a href="https://blog.rgbpp.io" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Blog</a></li>
+              <li><a href="https://talk.nervos.org/t/rgb-protocol-light-paper/7733" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Community Forum</a></li>
+              <li><a href="https://github.com/RGBPlusPlus/rgbpp/discussions" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">GitHub Discussions</a></li>
+              <li><a href="https://talk.nervos.org/t/rgb-rgb-ckb/7791/1" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Learn More</a></li>
+              <li><Link href="/source-code" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Resources</Link></li>
             </ul>
           </div>
         </div>
@@ -60,9 +60,9 @@ export default function Footer() {
               © 2024 RGB++ Protocol. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">Privacy</a>
-              <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Terms</a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Security</a>
+              <a href="https://github.com/RGBPlusPlus/rgbpp" className="text-gray-400 hover:text-orange-400 transition-colors">GitHub</a>
+              <a href="https://talk.nervos.org/t/rgb-protocol-light-paper/7733" className="text-gray-400 hover:text-green-400 transition-colors">Forum</a>
+              <a href="https://github.com/RGBPlusPlus/rgbpp/discussions" className="text-gray-400 hover:text-blue-400 transition-colors">Discussions</a>
             </div>
           </div>
         </div>

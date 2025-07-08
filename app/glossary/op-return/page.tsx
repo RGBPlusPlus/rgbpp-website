@@ -160,14 +160,18 @@ OP_PUSHBYTES_11
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">External Resources</h3>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button variant="outline" className="border-yellow-500/30 text-yellow-300 hover:bg-yellow-500/10">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Learn Me A Bitcoin
-                </Button>
-                <Button variant="outline" className="border-gray-500/30 text-gray-300 hover:bg-gray-500/10">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Bitcoin Core PR #32359
-                </Button>
+                <a href="https://learnmeabitcoin.com/technical/script/return/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-yellow-500/30 text-yellow-300 hover:bg-yellow-500/10">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    Learn Me A Bitcoin
+                  </Button>
+                </a>
+                <a href="https://github.com/bitcoin/bitcoin/pull/32359" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-gray-500/30 text-gray-300 hover:bg-gray-500/10">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    Bitcoin Core PR #32359
+                  </Button>
+                </a>
               </div>
             </div>
           </CardContent>

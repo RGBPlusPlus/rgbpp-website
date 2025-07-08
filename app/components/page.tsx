@@ -270,10 +270,12 @@ outputs:
                 <p className="text-gray-300 text-sm mb-3">
                   The following figure demonstrates the unlocking process with detailed verification steps and security checks.
                 </p>
-                <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-600/30">
-                  <p className="text-gray-400 text-sm italic text-center">
-                    [Unlocking Process Diagram - See RGB++ Design Documentation]
-                  </p>
+                <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-600/30 overflow-hidden">
+                  <img
+                    src="https://raw.githubusercontent.com/RGBPlusPlus/RGBPlusPlus-design/refs/heads/main/docs/assets/lock-verify.png"
+                    alt="RGB++ Lock Verification Process Diagram"
+                    className="w-full h-auto rounded-lg"
+                  />
                 </div>
               </div>
             </CardContent>
@@ -322,12 +324,6 @@ outputs:
                       <a href="https://github.com/RGBPlusPlus/rgbpp" target="_blank" rel="noopener noreferrer">
                         <GitBranch className="h-4 w-4 mr-2" />
                         RGB++ Script Repository
-                      </a>
-                    </Button>
-                    <Button variant="glass" effect="scale" className="w-full" asChild>
-                      <a href="#detailed-implementation" rel="noopener noreferrer">
-                        <Code className="h-4 w-4 mr-2" />
-                        Detailed Implementation
                       </a>
                     </Button>
                   </div>

@@ -385,34 +385,7 @@ export default function QuickStartPage() {
           </div>
         </section>
 
-        {/* Next Steps */}
-        <section className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-8 rounded-xl border border-orange-500/20">
-          <h3 className="text-2xl font-bold text-white mb-4">What's Next?</h3>
-          <p className="text-gray-300 mb-6">
-            Now that you understand the basics, dive deeper into RGB++ concepts and explore advanced features.
-          </p>
-          <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/concepts">
-              <Button variant="cyber" effect="scale" className="w-full">
-                <Bitcoin className="mr-2 h-4 w-4" />
-                Core Concepts
-              </Button>
-            </Link>
-            <Link href="/examples">
-              <Button variant="glass" effect="scale" className="w-full">
-                <Code className="mr-2 h-4 w-4" />
-                More Examples
-              </Button>
-            </Link>
-            <Link href="/components">
-              <Button variant="gradient" effect="scale" className="w-full shadow-lg shadow-purple-500/30">
-                <Network className="mr-2 h-4 w-4" />
-                Components
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </section>
+
       </div>
     </DocLayout>
   )

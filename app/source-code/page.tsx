@@ -14,42 +14,6 @@ export default function SourceCodePage() {
       description="Comprehensive resources, documentation, and development tools for RGB++ Protocol."
     >
       <div className="space-y-16">
-        {/* Quick Links */}
-        <section>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Card className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <FileText className="h-8 w-8 mx-auto mb-3 text-blue-400 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold text-white mb-1">Light Paper</h3>
-                <p className="text-xs text-gray-400">Protocol Overview</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border-green-500/20 hover:border-green-400/40 transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <Code className="h-8 w-8 mx-auto mb-3 text-green-400 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold text-white mb-1">RGB++ SDK</h3>
-                <p className="text-xs text-gray-400">Development Kit</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <Globe className="h-8 w-8 mx-auto mb-3 text-purple-400 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold text-white mb-1">Explorer</h3>
-                <p className="text-xs text-gray-400">Block Explorer</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border-orange-500/20 hover:border-orange-400/40 transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <GitBranch className="h-8 w-8 mx-auto mb-3 text-orange-400 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold text-white mb-1">GitHub</h3>
-                <p className="text-xs text-gray-400">Source Code</p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
 
         {/* Protocol Overview */}
         <section>

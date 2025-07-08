@@ -73,10 +73,12 @@ export default function CKBScriptPage() {
                   <p className="text-yellow-200 text-sm mb-4">
                     A required Script controlling the ownership and access to a Cell, ensuring only authorized users can spend/consume the Cell.
                   </p>
-                  <Button variant="outline" className="border-yellow-500/30 text-yellow-300 hover:bg-yellow-500/10 text-xs">
-                    <ExternalLink className="h-3 w-3 mr-2" />
-                    Learn More
-                  </Button>
+                  <a href="https://docs.nervos.org/docs/tech-explanation/lock-script" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" className="border-yellow-500/30 text-yellow-300 hover:bg-yellow-500/10 text-xs">
+                      <ExternalLink className="h-3 w-3 mr-2" />
+                      Learn More
+                    </Button>
+                  </a>
                 </div>
 
                 <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 p-6 rounded-xl border border-green-500/20">
@@ -87,10 +89,12 @@ export default function CKBScriptPage() {
                   <p className="text-green-200 text-sm mb-4">
                     An optional Script dictating how a Cell can be used or modified in a transaction.
                   </p>
-                  <Button variant="outline" className="border-green-500/30 text-green-300 hover:bg-green-500/10 text-xs">
-                    <ExternalLink className="h-3 w-3 mr-2" />
-                    Learn More
-                  </Button>
+                  <a href="https://docs.nervos.org/docs/tech-explanation/type-script" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" className="border-green-500/30 text-green-300 hover:bg-green-500/10 text-xs">
+                      <ExternalLink className="h-3 w-3 mr-2" />
+                      Learn More
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>

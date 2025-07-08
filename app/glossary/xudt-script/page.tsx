@@ -124,10 +124,12 @@ export default function XUDTScriptPage() {
 
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">External Resources</h3>
-              <Button variant="outline" className="border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/10">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                View xUDT Documentation
-              </Button>
+              <a href="https://docs.nervos.org/docs/common-scripts/xudt" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/10">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  View xUDT Documentation
+                </Button>
+              </a>
             </div>
           </CardContent>
         </Card>

@@ -243,14 +243,18 @@ OP_PUSHBYTES_11
                     Protocol Documentation
                   </h4>
                   <div className="space-y-3">
-                    <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10 text-sm">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      RGB++ Light Paper
-                    </Button>
-                    <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10 text-sm">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Technical Specifications
-                    </Button>
+                    <a href="https://talk.nervos.org/t/rgb-protocol-light-paper/7733" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10 text-sm">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        RGB++ Light Paper
+                      </Button>
+                    </a>
+                    <a href="https://github.com/RGBPlusPlus/RGBPlusPlus-design" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10 text-sm">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Technical Specifications
+                      </Button>
+                    </a>
                   </div>
                 </div>
 
@@ -260,14 +264,18 @@ OP_PUSHBYTES_11
                     CKB Documentation
                   </h4>
                   <div className="space-y-3">
-                    <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10 text-sm">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Cell Model Guide
-                    </Button>
-                    <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10 text-sm">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Script Development
-                    </Button>
+                    <a href="https://docs.nervos.org/docs/tech-explanation/cell-model" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10 text-sm">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Cell Model Guide
+                      </Button>
+                    </a>
+                    <a href="https://docs.nervos.org/docs/basics/guides/crypto-wallets/neuron" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10 text-sm">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Script Development
+                      </Button>
+                    </a>
                   </div>
                 </div>
 
@@ -277,14 +285,18 @@ OP_PUSHBYTES_11
                     Bitcoin Resources
                   </h4>
                   <div className="space-y-3">
-                    <Button variant="outline" className="w-full border-orange-500/30 text-orange-300 hover:bg-orange-500/10 text-sm">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Bitcoin Developer Guide
-                    </Button>
-                    <Button variant="outline" className="w-full border-orange-500/30 text-orange-300 hover:bg-orange-500/10 text-sm">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      UTXO Model Explained
-                    </Button>
+                    <a href="https://developer.bitcoin.org/devguide/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-orange-500/30 text-orange-300 hover:bg-orange-500/10 text-sm">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Bitcoin Developer Guide
+                      </Button>
+                    </a>
+                    <a href="https://bitcoin.org/en/developer-guide#transactions" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-orange-500/30 text-orange-300 hover:bg-orange-500/10 text-sm">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        UTXO Model Explained
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>

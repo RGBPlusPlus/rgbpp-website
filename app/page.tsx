@@ -72,7 +72,7 @@ export default function HomePage() {
                   Read Documentation
                 </Button>
               </Link>
-              <a href="https://github.com/ckb-cell/rgbpp" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/RGBPlusPlus" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-gray-600 bg-gray-900/50 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-blue-500/10 hover:border-gray-500 backdrop-blur-sm">
                   <Code className="mr-2 h-5 w-5" />
                   View GitHub
