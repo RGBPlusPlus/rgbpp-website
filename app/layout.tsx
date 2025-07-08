@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RGB++ Protocol - Bitcoin Layer 2 Protocol",
+  title: "RGB++ Protocol - Bitcoin’s Turing Catalyst",
   description: "RGB++ Protocol bridges Bitcoin's security with CKB's programmability through isomorphic binding, enabling sophisticated smart contracts and cross-chain asset management directly on Bitcoin.",
 };
 

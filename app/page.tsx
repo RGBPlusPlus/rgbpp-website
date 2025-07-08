@@ -59,43 +59,29 @@ export default function HomePage() {
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
-              Bitcoin Layer 2 Protocol
+              Bitcoin’s Turing Catalyst
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
-              RGB++ extends Bitcoin with Turing-complete smart contracts through innovative isomorphic binding,
-              enabling complex programmable logic while preserving Bitcoin's security model.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed text-center">
+              RGB++ unleashes the full potential of Bitcoin for a rich application ecosystem without altering its foundational security. This production-ready protocol offers a trustless method for dApps to interact directly with native Bitcoin transactions, facilitated by a lightweight, decentralized verifier.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/docs/introduction">
-                <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 border-0 shadow-lg shadow-orange-500/25">
-                  <Book className="mr-2 h-5 w-5" />
-                  Read Documentation
-                </Button>
-              </Link>
-              <a href="https://github.com/RGBPlusPlus" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="border-gray-600 bg-gray-900/50 hover:bg-gradient-to-r hover:from-green-500/10 hover:to-blue-500/10 hover:border-gray-500 backdrop-blur-sm">
-                  <Code className="mr-2 h-5 w-5" />
-                  View GitHub
-                </Button>
-              </a>
-            </div>
           </div>
 
           {/* RGB++ Architecture Diagram */}
-          <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 rounded-2xl p-8 mb-8 backdrop-blur-sm shadow-2xl">
-            <div className="text-center mb-8">
-              <h4 className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">RGB++ Protocol Architecture</h4>
-            </div>
+          <div className="text-center mb-16">
+            <h4 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">RGB++ Protocol Architecture</h4>
+          </div>
 
-            {/* Architecture Diagram */}
-            <div className="flex justify-center">
-              <div className="w-full max-w-7xl">
-                <img
-                  src="/rgb_plus_plus_architecture.svg"
-                  alt="RGB++ Protocol Architecture Diagram"
-                  className="w-full h-auto rounded-xl shadow-2xl shadow-gray-900/50"
-                  style={{ background: 'linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%)', padding: '24px' }}
-                />
+          {/* Architecture Diagram */}
+          <div className="mb-16">
+            <div className="bg-gradient-to-br from-white/95 to-gray-50/95 border border-gray-300/20 rounded-2xl p-6 shadow-2xl shadow-gray-900/30 backdrop-blur-sm">
+              <div className="flex justify-center">
+                <div className="w-full max-w-7xl">
+                  <img
+                    src="/rgb_plus_plus_architecture.svg"
+                    alt="RGB++ Protocol Architecture Diagram"
+                    className="w-full h-auto rounded-xl"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -370,7 +356,7 @@ export default function HomePage() {
               >
                 <div className="flex items-center">
                   <Users className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="group-hover:tracking-wide transition-all duration-300">Discover All 24+ Partners</span>
+                  <span className="group-hover:tracking-wide transition-all duration-300">Discover All Partners</span>
                   <div className="flex items-center ml-3">
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     <div className="flex ml-2 space-x-1">
@@ -392,6 +378,44 @@ export default function HomePage() {
             <p className="text-gray-400 text-sm mt-4 opacity-70 hover:opacity-100 transition-opacity duration-300">
               Click to explore our growing ecosystem of innovative partners
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Documentation CTA Section */}
+      <section className="py-20 px-2 bg-gradient-to-b from-gray-950/50 to-black/50 relative">
+        <div className="container mx-auto max-w-3xl relative">
+          <div className="text-center space-y-12">
+            <div className="space-y-6">
+              <h3 className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent mb-6">
+                Start Building with RGB++
+              </h3>
+              <p className="text-xl text-gray-300 leading-relaxed">
+                Comprehensive documentation to guide your Bitcoin programmability journey
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="relative inline-block">
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-green-500 to-blue-500 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <Link href="/docs/introduction">
+                  <Button className="relative bg-gradient-to-r from-orange-500/90 via-green-500/70 to-blue-500/90 hover:from-orange-500 hover:via-green-500 hover:to-blue-500 text-white lg:px-8 py-4 text-base font-medium rounded-full shadow-2xl hover:shadow-orange-500/30 transition-all duration-500 group border border-gray-600/20 hover:border-orange-400/40 backdrop-blur-sm">
+                    <div className="flex items-center">
+                      <Book className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="group-hover:tracking-wide transition-all duration-300">Get Started</span>
+                      <div className="flex items-center ml-3">
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      </div>
+                    </div>
+
+                    {/* Ripple Effect */}
+                    <div className="absolute inset-0 rounded-full overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+                    </div>
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

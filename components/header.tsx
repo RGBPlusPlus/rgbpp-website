@@ -82,7 +82,7 @@ export default function Header() {
                 <h1 className="text-xl font-bold bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
                   RGB++
                 </h1>
-                <p className="text-xs text-gray-400">Bitcoin Layer 2 Protocol</p>
+                <p className="text-xs text-gray-400">Bitcoin’s Turing Catalyst</p>
               </div>
             </Link>
 
