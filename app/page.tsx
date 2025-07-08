@@ -66,7 +66,7 @@ export default function HomePage() {
               enabling complex programmable logic while preserving Bitcoin's security model.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/introduction">
+              <Link href="/docs/introduction">
                 <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 border-0 shadow-lg shadow-orange-500/25">
                   <Book className="mr-2 h-5 w-5" />
                   Read Documentation

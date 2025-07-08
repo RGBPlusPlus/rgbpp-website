@@ -12,44 +12,44 @@ const navigationItems = [
   {
     title: "Getting Started",
     items: [
-      { title: "Introduction", href: "/introduction", icon: Book },
-      { title: "Resources", href: "/source-code", icon: Code },
+      { title: "Introduction", href: "/docs/introduction", icon: Book },
+      { title: "Resources", href: "/docs/resources", icon: Code },
     ]
   },
   {
     title: "Core Concepts",
     items: [
-      { title: "Single-Use Seal", href: "/single-use-seal", icon: Lock },
-      { title: "State Validation", href: "/state-validation", icon: Shield },
-      { title: "Isomorphic Binding", href: "/glossary/isomorphic-binding", icon: LinkIcon },
+      { title: "Single-Use Seal", href: "/docs/single-use-seal", icon: Lock },
+      { title: "State Validation", href: "/docs/state-validation", icon: Shield },
+      { title: "Isomorphic Binding", href: "/docs/isomorphic-binding", icon: LinkIcon },
     ]
   },
   {
     title: "Core Components",
     items: [
-      { title: "RGB++ Scripts", href: "/components", icon: Layers },
-      { title: "SPV Service", href: "/spv-service", icon: Network },
-      { title: "RGB++ SDK", href: "/rgbpp-sdk", icon: Code },
-      { title: "btc-assets-api", href: "/btc-assets-api", icon: Server },
+      { title: "RGB++ Scripts", href: "/docs/components", icon: Layers },
+      { title: "SPV Service", href: "/docs/spv-service", icon: Network },
+      { title: "RGB++ SDK", href: "/docs/rgbpp-sdk", icon: Code },
+      { title: "btc-assets-api", href: "/docs/btc-assets-api", icon: Server },
     ]
   },
   {
     title: "Examples",
     items: [
-      { title: "UDT", href: "/quickstart", icon: Zap },
+      { title: "UDT", href: "/docs/quickstart", icon: Zap },
     ]
   },
   {
     title: "Glossary",
     items: [
-      { title: "UTXO", href: "/glossary/utxo", icon: Hash },
-      { title: "CKB Cell", href: "/glossary/ckb-cell", icon: Database },
-      { title: "CKB Script", href: "/glossary/ckb-script", icon: Layers },
-      { title: "xUDT Script", href: "/glossary/xudt-script", icon: Shield },
-      { title: "SPV", href: "/glossary/spv", icon: Network },
-      { title: "MMR", href: "/glossary/mmr", icon: Hash },
-      { title: "Merkle Root", href: "/glossary/merkle-root", icon: Hash },
-      { title: "OP_RETURN", href: "/glossary/op-return", icon: FileText },
+      { title: "UTXO", href: "/docs/glossary/utxo", icon: Hash },
+      { title: "CKB Cell", href: "/docs/glossary/ckb-cell", icon: Database },
+      { title: "CKB Script", href: "/docs/glossary/ckb-script", icon: Layers },
+      { title: "xUDT Script", href: "/docs/glossary/xudt-script", icon: Shield },
+      { title: "SPV", href: "/docs/glossary/spv", icon: Network },
+      { title: "MMR", href: "/docs/glossary/mmr", icon: Hash },
+      { title: "Merkle Root", href: "/docs/glossary/merkle-root", icon: Hash },
+      { title: "OP_RETURN", href: "/docs/glossary/op-return", icon: FileText },
     ]
   }
 ];
@@ -89,10 +89,10 @@ export default function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <Link
-                href="/introduction"
+                href="/docs/introduction"
                 className={cn(
                   "transition-colors",
-                  pathname === "/introduction"
+                  pathname.startsWith("/docs")
                     ? "text-orange-400"
                     : "text-gray-300 hover:text-orange-400"
                 )}

@@ -26,10 +26,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Documentation</h3>
             <ul className="space-y-2">
-              <li><Link href="/introduction" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Introduction</Link></li>
-              <li><Link href="/quickstart" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Quick Start</Link></li>
-              <li><Link href="/concepts" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Core Concepts</Link></li>
-              <li><Link href="/source-code" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Resources</Link></li>
+              <li><Link href="/docs/introduction" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Introduction</Link></li>
+              <li><Link href="/docs/quickstart" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Quick Start</Link></li>
+              <li><Link href="/docs/concepts" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Core Concepts</Link></li>
+              <li><Link href="/docs/resources" className="text-gray-400 hover:text-orange-400 text-sm transition-colors">Resources</Link></li>
             </ul>
           </div>
 
@@ -37,8 +37,8 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Tools</h3>
             <ul className="space-y-2">
               <li><a href="https://explorer.rgbpp.io" className="text-gray-400 hover:text-green-400 text-sm transition-colors">Explorer</a></li>
-              <li><Link href="/btc-assets-api" className="text-gray-400 hover:text-green-400 text-sm transition-colors">API Docs</Link></li>
-              <li><Link href="/rgbpp-sdk" className="text-gray-400 hover:text-green-400 text-sm transition-colors">RGB++ SDK</Link></li>
+              <li><Link href="/docs/btc-assets-api" className="text-gray-400 hover:text-green-400 text-sm transition-colors">API Docs</Link></li>
+              <li><Link href="/docs/rgbpp-sdk" className="text-gray-400 hover:text-green-400 text-sm transition-colors">RGB++ SDK</Link></li>
               <li><a href="https://github.com/RGBPlusPlus/rgbpp" className="text-gray-400 hover:text-green-400 text-sm transition-colors">GitHub</a></li>
             </ul>
           </div>
@@ -49,7 +49,7 @@ export default function Footer() {
               <li><a href="https://talk.nervos.org/t/rgb-protocol-light-paper/7733" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Community Forum</a></li>
               <li><a href="https://github.com/RGBPlusPlus/rgbpp/discussions" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">GitHub Discussions</a></li>
               <li><a href="https://talk.nervos.org/t/rgb-rgb-ckb/7791/1" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Learn More</a></li>
-              <li><Link href="/source-code" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Resources</Link></li>
+              <li><Link href="/docs/resources" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Resources</Link></li>
             </ul>
           </div>
         </div>
