@@ -93,7 +93,7 @@ export default function IsomorphicBindingPage() {
                   <li>• <strong>Bitcoin Security:</strong> Inherits Bitcoin's proven security model</li>
                   <li>• <strong>Programmability:</strong> Enables complex smart contracts on Bitcoin</li>
                   <li>• <strong>Scalability:</strong> Off-loads computation to CKB while maintaining Bitcoin ownership</li>
-                  <li>• <strong>Interoperability:</strong> Bridges Bitcoin and CKB ecosystems seamlessly</li>
+                  <li>• <strong>Interoperability:</strong> Connects Bitcoin and CKB ecosystems seamlessly</li>
                 </ul>
               </div>
             </div>

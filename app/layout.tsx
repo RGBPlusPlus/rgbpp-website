@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "RGB++ Protocol - Bitcoin’s Turing Catalyst",
-  description: "RGB++ Protocol bridges Bitcoin's security with CKB's programmability through isomorphic binding, enabling sophisticated smart contracts and cross-chain asset management directly on Bitcoin.",
+  description: "RGB++ Protocol unifies Bitcoin's security with CKB's programmability through isomorphic binding, enabling sophisticated smart contracts and cross-chain asset management directly on Bitcoin.",
 };
 
 export default function RootLayout({

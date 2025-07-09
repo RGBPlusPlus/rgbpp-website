@@ -26,7 +26,7 @@ export default function BTCAssetsAPIPage() {
             <CardContent className="space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
                 This is a service that retrieves BTC/RGB++ information/assets and processes transactions with these assets.
-                It serves as the critical infrastructure component that bridges Bitcoin and CKB networks for RGB++ operations.
+                It serves as the critical infrastructure component that connects Bitcoin and CKB networks for RGB++ operations.
               </p>
 
               <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
@@ -311,7 +311,7 @@ export default function BTCAssetsAPIPage() {
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">•</div>
-                      <p className="text-purple-200 text-sm">Cross-chain bridges</p>
+                      <p className="text-purple-200 text-sm">Cross-chain protocols</p>
                     </div>
                   </div>
                 </div>

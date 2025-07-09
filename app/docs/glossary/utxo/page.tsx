@@ -55,7 +55,7 @@ export default function UTXOPage() {
               <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6 rounded-xl border border-purple-500/20">
                 <p className="text-purple-300 leading-relaxed">
                   In RGB++, UTXOs are bound to CKB Cells through isomorphic binding, enabling Bitcoin's security model
-                  to protect programmable assets stored in CKB's Cell model. This creates a bridge between Bitcoin's
+                  to protect programmable assets stored in CKB's Cell model. This creates a connection between Bitcoin's
                   proven security and CKB's programmability.
                 </p>
               </div>

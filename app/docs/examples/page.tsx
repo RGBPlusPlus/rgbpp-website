@@ -424,7 +424,7 @@ leapToCKB();`}
                       <h4 className="font-semibold text-green-300 mb-2">Leap Features</h4>
                       <ul className="text-green-200 text-sm space-y-1">
                         <li>• Cross-chain asset transfer</li>
-                        <li>• Secure bridge mechanism</li>
+                        <li>• Secure binding mechanism</li>
                         <li>• CKB programmability unlock</li>
                       </ul>
                     </div>

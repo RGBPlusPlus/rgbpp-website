@@ -11,7 +11,7 @@ export default function IntroductionPage() {
   return (
     <DocLayout
       title="Introduction"
-      description="Learn about RGB++ Protocol, the revolutionary technology that bridges Bitcoin's security with CKB's programmability through isomorphic binding."
+      description="Learn about RGB++ Protocol, the revolutionary technology that unifies Bitcoin's security with CKB's programmability through isomorphic binding."
     >
       <div className="space-y-12">
         {/* What is RGB++? */}
@@ -23,8 +23,8 @@ export default function IntroductionPage() {
           <div className="space-y-6">
             <p className="text-gray-300 text-lg leading-relaxed">
               The RGB++ Protocol is a simple protocol that enhances Bitcoin Layer 1 programmability by establishing
-              a binding between Bitcoin UTXOs and Turing-complete CKB Scripts. This binding creates a powerful bridge
-              between Bitcoin's security and CKB's programmability.
+              a binding between Bitcoin UTXOs and Turing-complete CKB Scripts. This binding enables Bitcoin's security
+              to work seamlessly with CKB's programmability.
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">
@@ -54,7 +54,7 @@ export default function IntroductionPage() {
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">
-              RGB++ Protocol bridges Bitcoin's security with CKB's programmability, enabling sophisticated
+              RGB++ Protocol unifies Bitcoin's security with CKB's programmability, enabling sophisticated
               applications directly on Bitcoin. Developers can now create advanced smart contracts that power
               decentralized applications, from IDO platforms to liquid staking pools, and more.
             </p>
@@ -217,7 +217,7 @@ export default function IntroductionPage() {
                 <Card key={index} className="bg-white/5 backdrop-blur-xl border-white/10">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between mb-2">
-                      <Badge variant="outline" className="text-xs">Step {step.step}</Badge>
+                      <Badge className="text-xs bg-white/20 text-white border-white/30 font-semibold">Step {step.step}</Badge>
                       <step.icon className={`h-5 w-5 ${step.color}`} />
                     </div>
                     <CardTitle className="text-white text-sm">{step.title}</CardTitle>

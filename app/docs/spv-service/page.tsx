@@ -28,7 +28,7 @@ export default function SPVServicePage() {
                 Within the programmable layer of RGB++, a Bitcoin SPV light client maintains a synchronized record of Bitcoin block headers,
                 enabling smart contracts to access and verify Bitcoin blockchain data, including historical transaction records, block difficulty,
                 network hash rate, current block height, timestamps, and detailed transaction information, thereby providing a secure and efficient
-                bridge between Bitcoin and CKB networks.
+                connection between Bitcoin and CKB networks.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
