@@ -85,6 +85,53 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
+          {/* Key Components Explanation */}
+          <div className="mb-16">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* CKB Blockchain */}
+              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl p-6 border border-blue-500/20 backdrop-blur-sm">
+                <div className="flex items-center mb-4">
+                  <h4 className="text-xl font-bold text-white ml-3">Common Knowledge Base (CKB)</h4>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  Built on RISC-V and secured by Proof-of-Work, CKB is the most flexible and interoperable blockchain. With its open-source instruction set architecture, CKB enables native multi-language development and low-level CPU access for maximum efficiency. The battle-tested security of Proof-of-Work consensus ensures robust network protection, while the unique Cell model provides unlimited programmability and seamless cross-chain integration capabilities.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-blue-300 text-sm">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                    <span>Turing-complete Script system</span>
+                  </div>
+                  <div className="flex items-center text-blue-300 text-sm">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                    <span>Cell model for flexible data storage</span>
+                  </div>
+                  <div className="flex items-center text-blue-300 text-sm">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                    <span>RISC-V instruction set for native multi-language development</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Isomorphic Binding */}
+              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-2xl p-6 border border-green-500/20 backdrop-blur-sm">
+                <div className="flex items-center mb-4">
+                  <h4 className="text-xl font-bold text-white ml-3">Isomorphic Binding</h4>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  A one-to-one mapping mechanism that links Bitcoin UTXOs to CKB Cells.
+                </p>
+                <div className="flex justify-center">
+                  <img
+                    src="/isomorphic_binding.svg"
+                    alt="Isomorphic Binding Diagram"
+                    className="w-full max-w-2xl h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -156,9 +203,9 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/2 via-green-500/2 to-blue-500/2 blur-3xl"></div>
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">RGB++ vs. Traditional RGB</h3>
+            <h3 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">Bitcoin Layer 2 Solution Comparison</h3>
             <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              RGB++ simplifies the RGB protocol by moving validation on-chain while maintaining all security guarantees.
+              Comprehensive comparison of RGB++ with major Bitcoin layer 2 solutions across key technical capabilities.
             </p>
           </div>
 
@@ -166,40 +213,67 @@ export default function HomePage() {
             <table className="w-full border border-gray-700/50 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900/80 to-gray-800/40 backdrop-blur-sm shadow-2xl">
               <thead className="bg-gradient-to-r from-gray-800/80 to-gray-700/60">
                 <tr>
-                  <th className="py-1 px-2 lg:px-6 lg:py-4 text-left text-white lg:font-sm font-medium ">Feature</th>
-                  <th className="py-1 px-2 lg:px-6 lg:py-4 text-center text-white lg:font-sm font-medium ">RGB++</th>
-                  <th className="py-1 px-2 lg:px-6 lg:py-4 text-center text-white lg:font-sm font-medium ">Traditional RGB</th>
+                  <th className="py-2 px-3 text-left text-white text-sm font-medium">Features</th>
+                  <th className="py-2 px-3 text-center text-white text-sm font-medium">RGB++</th>
+                  <th className="py-2 px-3 text-center text-white text-sm font-medium">RGB</th>
+                  <th className="py-2 px-3 text-center text-white text-sm font-medium">Liquid Network</th>
+                  <th className="py-2 px-3 text-center text-white text-sm font-medium">Rootstock</th>
+                  <th className="py-2 px-3 text-center text-white text-sm font-medium">Stacks</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-700/30">
-                <tr className="hover:bg-gradient-to-r hover:from-orange-500/5 hover:to-green-500/5 transition-all duration-300">
-                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-gray-200">Validation</td>
-                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mx-auto drop-shadow-lg" />
-                    <span className="text-sm text-gray-200 block mt-1">On-chain</span>
-                  </td>
-                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
-                    <span className="text-sm text-gray-400">Client-side</span>
-                  </td>
-                </tr>
                 <tr className="hover:bg-gradient-to-r hover:from-green-500/5 hover:to-blue-500/5 transition-all duration-300">
-                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-gray-200">Data Availability</td>
-                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mx-auto drop-shadow-lg" />
-                    <span className="text-sm text-gray-200 block mt-1">Public on CKB</span>
+                  <td className="py-3 px-3 text-gray-200 text-sm font-medium">Bitcoin's Security Inheritance</td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-green-300">Full</span>
                   </td>
-                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
-                    <span className="text-sm text-gray-400">Private/Local</span>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-green-300">Full</span>
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-orange-300">Partial (federated)</span>
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-orange-300">Partial (federated)</span>
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-orange-300">Partial (PoX)</span>
                   </td>
                 </tr>
-                <tr className="hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-orange-500/5 transition-all duration-300">
-                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-gray-200">Usability</td>
-                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mx-auto drop-shadow-lg" />
-                    <span className="text-sm text-gray-200 block mt-1">User-friendly</span>
+                <tr className="hover:bg-gradient-to-r hover:from-purple-500/5 hover:to-orange-500/5 transition-all duration-300">
+                  <td className="py-3 px-3 text-gray-200 text-sm font-medium">Decentralization</td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-green-300">High</span>
                   </td>
-                  <td className="py-1 px-2 lg:px-6 lg:py-4 text-center">
-                    <span className="text-sm text-gray-400">Complex</span>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-green-300">High</span>
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-orange-300">Federated</span>
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-orange-300">Federated</span>
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-green-300">Decentralized</span>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gradient-to-r hover:from-red-500/5 hover:to-purple-500/5 transition-all duration-300">
+                  <td className="py-3 px-3 text-gray-200 text-sm font-medium">Technical Approach</td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-blue-300">Blockchain-enhanced state validation</span>
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-blue-300">Client-side validation</span>
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-blue-300">Federated 2-way peg with multisig federation</span>
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-blue-300">2-way peg via bridge contracts & miners</span>
+                  </td>
+                  <td className="py-3 px-3 text-center">
+                    <span className="text-xs text-blue-300">Proof-of-Transfer (PoX) + Anchoring to BTC</span>
                   </td>
                 </tr>
               </tbody>
