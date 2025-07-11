@@ -141,7 +141,7 @@ export default function QuickStartPage() {
                   <Code className="h-5 w-5 mr-2 text-green-400" />
                   Code Example: Token Issuance
                 </h4>
-                <pre className="text-sm text-gray-300 overflow-x-auto">
+                <pre className="text-sm overflow-x-auto">
                   <code>{`async function issueUdt({
   udtScriptInfo,
   utxoSeal,

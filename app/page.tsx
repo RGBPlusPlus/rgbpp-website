@@ -14,7 +14,6 @@ import Footer from "@/components/footer"
 
 export default function HomePage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
-  const [showAllPartners, setShowAllPartners] = useState(false)
 
   const handleCopyCode = (code: string, id: string) => {
     navigator.clipboard.writeText(code)
@@ -58,7 +57,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-green-500/5 to-blue-500/5 blur-3xl"></div>
         <div className="container mx-auto max-w-6xl relative">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent !leading-relaxed">
               Bitcoin’s Turing Catalyst
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed text-center">
@@ -336,116 +335,34 @@ export default function HomePage() {
             })}
           </div>
 
-          {/* Partners Modal */}
-          {showAllPartners && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-              {/* Backdrop */}
-              <div
-                className="absolute inset-0 bg-black/80 backdrop-blur-sm animate-in fade-in duration-300"
-                onClick={() => setShowAllPartners(false)}
-              ></div>
 
-              {/* Modal Content */}
-              <div className="relative bg-gradient-to-br from-gray-900/95 to-gray-800/90 backdrop-blur-xl border border-gray-600/30 rounded-3xl  w-full max-h-[80vh] overflow-hidden animate-in zoom-in-95 duration-500 shadow-2xl shadow-gray-900/50">
-                {/* Header */}
-                <div className="flex items-center justify-between p-6 border-b border-gray-700/30">
-                  <div>
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
-                      All Ecosystem Partners
-                    </h3>
-                    <p className="text-gray-300 mt-1">Building the RGB++ ecosystem together</p>
-                  </div>
-                  <button
-                    onClick={() => setShowAllPartners(false)}
-                    className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200 group"
-                  >
-                    <ArrowRight className="w-5 h-5 text-white rotate-45 group-hover:rotate-90 transition-transform duration-200" />
-                  </button>
-                </div>
-
-                {/* Partners Grid */}
-                <div className="p-6 overflow-y-auto max-h-[60vh]">
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {[
-                      { name: "Caboroca", domain: "caboroca.xyz", category: "DeFi" },
-                      { name: "RGB++T", domain: "rgbppt.xyz", category: "Trading" },
-                      { name: "RGB Cat", domain: "rgbcat.io", category: "NFT" },
-                      { name: "Haste", domain: "haste.pro", category: "Gaming" },
-                      { name: "OpenStamp", domain: "openstamp.io", category: "Identity" },
-                      { name: "Rei Wallet", domain: "reiwallet.io", category: "Wallet" },
-                      { name: "DOBPad", domain: "dobpad.com", category: "Launchpad" },
-                      { name: "Moonbit", domain: "moonbit.network", category: "Infrastructure" },
-                      { name: "Jumbo Kuji", domain: "kujinow.com", category: "Gaming" },
-                      { name: "Mobit", domain: "mobit.app", category: "Mobile" },
-                      { name: "Cellula", domain: "cellula.life", category: "Social" },
-                      { name: "CoinEx", domain: "coinex.com", category: "Exchange" },
-                      { name: "Seal2Earn", domain: "seal2earn.xyz", category: "GameFi" },
-                      { name: "DOBHub", domain: "dobhub.xyz", category: "Hub" },
-                      { name: "Element", domain: "element-app.market", category: "Marketplace" },
-                      { name: "UTXO Global", domain: "utxo.global", category: "Analytics" },
-                      { name: "JoyID", domain: "server.joy.id", category: "Identity" },
-                      { name: "Trust BTC", domain: "trust.btc.finance", category: "DeFi" }
-                    ].map((partner, index) => (
-                      <Card key={index} className="group bg-gradient-to-br from-gray-800/50 to-gray-700/30 hover:from-gray-700/60 hover:to-gray-600/40 backdrop-blur-lg border border-gray-600/30 hover:border-orange-400/50 transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-lg">
-                        <CardContent className="p-4">
-                          <div className="flex items-center justify-between mb-3">
-                            <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-green-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                              <span className="text-white font-bold text-sm">{partner.name.charAt(0)}</span>
-                            </div>
-                            <Badge variant="outline" className="text-xs border-orange-400/30 text-orange-200 px-2 py-1 bg-orange-500/10">
-                              {partner.category}
-                            </Badge>
-                          </div>
-                          <h4 className="font-semibold text-white mb-2 text-sm group-hover:text-orange-400 transition-colors">
-                            {partner.name}
-                          </h4>
-                          <p className="text-xs text-gray-300 font-mono break-all">
-                            {partner.domain}
-                          </p>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Footer */}
-                <div className="p-6 border-t border-white/10 bg-black/50">
-                  <div className="flex items-center justify-center">
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Users className="w-4 h-4 mr-2" />
-                      <span>24+ partners and growing</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
 
           <div className="text-center">
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-green-500 to-blue-500 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-              <Button
-                onClick={() => setShowAllPartners(!showAllPartners)}
-                className="relative bg-gradient-to-r from-orange-500/90 via-green-500/70 to-blue-500/90 hover:from-orange-500 hover:via-green-500 hover:to-blue-500 text-white lg:px-8 py-4 text-base font-medium rounded-full shadow-2xl hover:shadow-orange-500/30 transition-all duration-500 group border border-gray-600/20 hover:border-orange-400/40 backdrop-blur-sm"
-              >
-                <div className="flex items-center">
-                  <Users className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="group-hover:tracking-wide transition-all duration-300">Discover All Partners</span>
-                  <div className="flex items-center ml-3">
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    <div className="flex ml-2 space-x-1">
-                      <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse"></div>
-                      <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                      <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+              <Link href="/partners">
+                                  <Button
+                    className="relative bg-gradient-to-r from-orange-500/90 via-green-500/70 to-blue-500/90 hover:from-orange-500 hover:via-green-500 hover:to-blue-500 text-white lg:px-8 py-4 text-base font-medium rounded-full shadow-2xl hover:shadow-orange-500/30 transition-all duration-500 group border border-gray-600/20 hover:border-orange-400/40 backdrop-blur-sm"
+                  >
+                    <div className="flex items-center">
+                      <Users className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="group-hover:tracking-wide transition-all duration-300">Discover All Partners</span>
+                      <div className="flex items-center ml-3">
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                        <div className="flex ml-2 space-x-1">
+                          <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse"></div>
+                          <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
 
-                {/* Ripple Effect */}
-                <div className="absolute inset-0 rounded-full overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
-                </div>
-              </Button>
+                    {/* Ripple Effect */}
+                    <div className="absolute inset-0 rounded-full overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+                    </div>
+                  </Button>
+                </Link>
             </div>
 
             {/* Subtle hint text */}

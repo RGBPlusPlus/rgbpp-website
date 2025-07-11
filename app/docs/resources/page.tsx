@@ -279,7 +279,7 @@ export default function SourceCodePage() {
             <div>
               <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2 text-green-400" />
-                Mirana Mainnet
+                Meepo Mainnet
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <Card className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border-orange-500/20">
