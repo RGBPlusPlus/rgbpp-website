@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -411,8 +413,7 @@ async function leapToCKB() {
   console.log('Leap completed:', result);
 }
 
-leapToCKB();`}
-                      </pre>
+leapToCKB();`}</CodeBlock>
                     </div>
                     <div className="p-4 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-lg border border-green-500/20">
                       <h4 className="font-semibold text-green-300 mb-2">Leap Features</h4>
