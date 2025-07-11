@@ -147,7 +147,7 @@ export function DocLayout({ children, title, description }: DocLayoutProps) {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 min-h-screen w-full px-4 pl-[256px]">
+        <main className="flex-1 min-h-screen w-full px-4 lg:pl-[256px]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
             {/* Breadcrumb */}
             <div className="flex items-center space-x-2 text-sm text-gray-400 mb-6 sm:mb-8">

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Layers, Shield, Network, Code, Database, Server, ExternalLink, ArrowRight, GitBranch, Lock, Clock, Settings } from "lucide-react"
 import Link from "next/link"
+import CodeBlock from "@/components/ui/code-block"
 
 export default function ComponentsPage() {
   return (
@@ -78,13 +79,11 @@ export default function ComponentsPage() {
                 <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-6 rounded-xl border border-orange-500/20">
                   <h4 className="font-semibold text-orange-300 mb-3 text-lg">Contract Structure</h4>
                   <div className="bg-black/30 p-4 rounded-lg">
-                    <pre className="text-orange-200 text-sm font-mono">
-                      {`RGBPP_lock:
+                    <CodeBlock language="yaml" className="text-orange-200">{`RGBPP_lock:
     code_hash:
         RGBPP_lock
     args:
-        out_index | %bitcoin_tx%`}
-                    </pre>
+        out_index | %bitcoin_tx%`}</CodeBlock>
                   </div>
                   <p className="text-orange-200 text-sm mt-3">
                     The combination of <code className="bg-orange-500/20 px-2 py-1 rounded">out_index</code> and{" "}
@@ -121,10 +120,8 @@ export default function ComponentsPage() {
                 <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 p-6 rounded-xl border border-green-500/20">
                   <h4 className="font-semibold text-green-300 mb-3 text-lg">Contract Structure</h4>
                   <div className="bg-black/30 p-4 rounded-lg">
-                    <pre className="text-green-200 text-sm font-mono">
-                      {`BTC_TIME_lock:
-    args: lock_script | after | %new_bitcoin_tx%`}
-                    </pre>
+                    <CodeBlock language="yaml" className="text-green-200">{`BTC_TIME_lock:
+    args: lock_script | after | %new_bitcoin_tx%`}</CodeBlock>
                   </div>
                   <div className="mt-3 space-y-2 text-sm">
                     <p className="text-green-200">
@@ -168,15 +165,13 @@ export default function ComponentsPage() {
               <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6 rounded-xl border border-purple-500/20">
                 <h4 className="font-semibold text-purple-300 mb-4 text-lg">RGBPPConfig Structure</h4>
                 <div className="bg-black/30 p-4 rounded-lg">
-                  <pre className="text-purple-200 text-sm font-mono">
-                    {`struct RGBPPConfig {
+                  <CodeBlock language="rust" className="text-purple-200">{`struct RGBPPConfig {
   version: Uint16,
   // Type hash of bitcoin light client
   bitcoin_lc_type_hash: Byte32,
   // Type hash of bitcoin time lock contract
   bitcoin_time_lock_type_hash: Byte32,
-}`}
-                  </pre>
+}`}</CodeBlock>
                 </div>
               </div>
 
@@ -184,8 +179,7 @@ export default function ComponentsPage() {
                 <div className="bg-black/20 p-6 rounded-xl border border-white/10">
                   <h4 className="font-semibold text-white mb-4">Deployment Process</h4>
                   <div className="bg-black/30 p-4 rounded-lg">
-                    <pre className="text-gray-300 text-sm font-mono">
-                      {`# BTC_TIME_lock
+                    <CodeBlock language="yaml" className="text-gray-300">{`# BTC_TIME_lock
 inputs: any cells
 outputs:
   BTC_TIME_lock code cell
@@ -195,8 +189,7 @@ outputs:
 inputs: any cells
 outputs:
   RGBPP_lock code cell
-  rgb_lock_config cell`}
-                    </pre>
+  rgb_lock_config cell`}</CodeBlock>
                   </div>
                 </div>
 

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { FileText, ExternalLink, ArrowLeft, ArrowRight } from "lucide-react"
 import NextLink from "next/link"
+import CodeBlock from "@/components/ui/code-block"
 
 export default function OPReturnPage() {
   return (
@@ -66,11 +67,9 @@ export default function OPReturnPage() {
               <h3 className="text-2xl font-bold text-white">Script Structure</h3>
               <div className="bg-black/30 p-6 rounded-lg border border-white/10">
                 <h4 className="font-semibold text-white text-lg mb-4">Example OP_RETURN Script</h4>
-                <pre className="text-yellow-200 text-sm font-mono leading-relaxed">
-                  <code>{`OP_RETURN
+                <CodeBlock language="bitcoin" className="text-yellow-200">{`OP_RETURN
 OP_PUSHBYTES_11
-68656c6c6f20776f726c64`}</code>
-                </pre>
+68656c6c6f20776f726c64`}</CodeBlock>
                 <p className="text-gray-300 text-sm mt-4">
                   This example embeds "hello world" (in hexadecimal) into the Bitcoin blockchain.
                 </p>

@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Zap, Code, Wrench, Bitcoin, Network, ArrowRight, ExternalLink, Copy, CheckCircle, AlertCircle } from "lucide-react"
 import Link from "next/link"
+import CodeBlock from "@/components/ui/code-block"
 
 export default function QuickStartPage() {
   return (
@@ -141,8 +142,7 @@ export default function QuickStartPage() {
                   <Code className="h-5 w-5 mr-2 text-green-400" />
                   Code Example: Token Issuance
                 </h4>
-                <pre className="text-sm overflow-x-auto">
-                  <code>{`async function issueUdt({
+                <CodeBlock language="typescript">{`async function issueUdt({
   udtScriptInfo,
   utxoSeal,
 }: {
@@ -194,8 +194,7 @@ export default function QuickStartPage() {
   const txHash = await ckbSigner.client.sendTransaction(ckbFinalTx);
   
   return txHash;
-}`}</code>
-                </pre>
+}`}</CodeBlock>
               </div>
 
               <div className="flex items-center flex-wrap gap-4 justify-start">
@@ -226,8 +225,7 @@ export default function QuickStartPage() {
                   <Code className="h-5 w-5 mr-2 text-blue-400" />
                   Code Example: Token Transfer
                 </h4>
-                <pre className="text-sm text-gray-300 overflow-x-auto">
-                  <code>{`async function transferUdt({
+                <CodeBlock language="typescript">{`async function transferUdt({
   udtScriptInfo,
   receivers,
 }: {
@@ -256,8 +254,7 @@ export default function QuickStartPage() {
   );
 
   // Continue with Bitcoin transaction submission...
-}`}</code>
-                </pre>
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -277,8 +274,7 @@ export default function QuickStartPage() {
                   <Code className="h-5 w-5 mr-2 text-purple-400" />
                   Code Example: Leap to CKB
                 </h4>
-                <pre className="text-sm text-gray-300 overflow-x-auto">
-                  <code>{`async function btcUdtToCkb({
+                <CodeBlock language="typescript">{`async function btcUdtToCkb({
   udtScriptInfo,
   receivers,
 }: {
@@ -302,8 +298,7 @@ export default function QuickStartPage() {
   );
 
   // Continue with transaction processing...
-}`}</code>
-                </pre>
+}`}</CodeBlock>
               </div>
             </div>
           </div>

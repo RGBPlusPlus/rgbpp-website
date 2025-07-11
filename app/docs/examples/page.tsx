@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowLeft, ArrowRight, FileText, Play, Copy, Bitcoin, Layers, Globe, Clock } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/header"
+import CodeBlock from "@/components/ui/code-block"
 
 export default function ExamplesPage() {
   return (
@@ -131,8 +132,7 @@ export default function ExamplesPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="bg-gray-900/80 backdrop-blur-sm text-gray-100 p-4 rounded-lg overflow-x-auto mb-4 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300">
-                      <pre className="text-sm">
-                        {`// Example code for UDT Issuance
+                      <CodeBlock language="typescript">{`// Example code for UDT Issuance
 import { RgbppSDK } from 'rgbpp-sdk';
 import { CCC } from '@nervosnetwork/ckb-sdk-core';
 
@@ -153,8 +153,7 @@ async function issueUDT() {
   console.log('UDT issued:', result);
 }
 
-issueUDT();`}
-                      </pre>
+issueUDT();`}</CodeBlock>
                     </div>
                     <div className="p-4 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-lg border border-orange-500/20">
                       <h4 className="font-semibold text-orange-300 mb-2">Key Features</h4>
@@ -202,8 +201,7 @@ issueUDT();`}
                   </CardHeader>
                   <CardContent>
                     <div className="bg-gray-900/80 backdrop-blur-sm text-gray-100 p-4 rounded-lg overflow-x-auto mb-4 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
-                      <pre className="text-sm">
-                        {`// Example code for UDT Transfer
+                      <CodeBlock language="typescript">{`// Example code for UDT Transfer
 import { RgbppSDK } from 'rgbpp-sdk';
 
 async function transferUDT() {
@@ -223,8 +221,7 @@ async function transferUDT() {
   console.log('Transfer completed:', result);
 }
 
-transferUDT();`}
-                      </pre>
+transferUDT();`}</CodeBlock>
                     </div>
                     <div className="p-4 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-lg border border-blue-500/20">
                       <h4 className="font-semibold text-blue-300 mb-2">Transfer Features</h4>
@@ -287,8 +284,7 @@ transferUDT();`}
                   </CardHeader>
                   <CardContent>
                     <div className="bg-gray-900/80 backdrop-blur-sm text-gray-100 p-4 rounded-lg overflow-x-auto mb-4 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                      <pre className="text-sm">
-                        {`// Bitcoin-based RGB++ asset transfers
+                      <CodeBlock language="typescript">{`// Bitcoin-based RGB++ asset transfers
 import { RgbppSDK } from 'rgbpp-sdk';
 import { BitcoinWallet } from 'bitcoin-wallet';
 
@@ -320,8 +316,7 @@ async function bitcoinBasedTransfer() {
   console.log('RGB++ transfer:', result);
 }
 
-bitcoinBasedTransfer();`}
-                      </pre>
+bitcoinBasedTransfer();`}</CodeBlock>
                     </div>
                     <div className="p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">
                       <h4 className="font-semibold text-purple-300 mb-2">Transfer Features</h4>
@@ -382,8 +377,7 @@ bitcoinBasedTransfer();`}
                   </CardHeader>
                   <CardContent>
                     <div className="bg-gray-900/80 backdrop-blur-sm text-gray-100 p-4 rounded-lg overflow-x-auto mb-4 border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-                      <pre className="text-sm">
-                        {`// Moving assets from Bitcoin to CKB
+                      <CodeBlock language="typescript">{`// Moving assets from Bitcoin to CKB
 import { RgbppSDK } from 'rgbpp-sdk';
 import { CCC } from '@nervosnetwork/ckb-sdk-core';
 
@@ -479,8 +473,7 @@ leapToCKB();`}
                   </CardHeader>
                   <CardContent>
                     <div className="bg-gray-900/80 backdrop-blur-sm text-gray-100 p-4 rounded-lg overflow-x-auto mb-4 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300">
-                      <pre className="text-sm">
-                        {`// Unlocking BTC_TIME_lock contracts
+                      <CodeBlock language="typescript">{`// Unlocking BTC_TIME_lock contracts
 import { RgbppSDK } from 'rgbpp-sdk';
 import { CCC } from '@nervosnetwork/ckb-sdk-core';
 
@@ -519,8 +512,7 @@ async function unlockTimeLock() {
   }
 }
 
-unlockTimeLock();`}
-                      </pre>
+unlockTimeLock();`}</CodeBlock>
                     </div>
                     <div className="p-4 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-lg border border-yellow-500/20">
                       <h4 className="font-semibold text-yellow-300 mb-2">Time Lock Features</h4>

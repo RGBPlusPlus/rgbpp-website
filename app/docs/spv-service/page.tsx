@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Network, Shield, Database, Server, ExternalLink, ArrowRight, GitBranch, Hash, Clock, Layers } from "lucide-react"
 import Link from "next/link"
+import CodeBlock from "@/components/ui/code-block"
 
 export default function SPVServicePage() {
   return (
@@ -153,8 +154,7 @@ export default function SPVServicePage() {
                 <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 p-6 rounded-xl border border-cyan-500/20">
                   <h4 className="font-semibold text-cyan-300 mb-3 text-lg">Cell Structure</h4>
                   <div className="bg-black/30 p-4 rounded-lg">
-                    <pre className="text-cyan-200 text-sm font-mono">
-                      {`Client Cell:  
+                    <CodeBlock language="yaml" className="text-cyan-200">{`Client Cell:  
     Type Script:
         code hash: "..."
         hash type: "type"
@@ -163,8 +163,7 @@ export default function SPVServicePage() {
         - id
         - btc tip block hash
         - btc headers mmr root
-        - target adjust info`}
-                    </pre>
+        - target adjust info`}</CodeBlock>
                   </div>
                 </div>
 
@@ -197,15 +196,14 @@ export default function SPVServicePage() {
                 <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 p-6 rounded-xl border border-green-500/20">
                   <h4 className="font-semibold text-green-300 mb-3 text-lg">Cell Structure</h4>
                   <div className="bg-black/30 p-4 rounded-lg">
-                    <pre className="text-green-200 text-sm font-mono">
+                    <CodeBlock language="yaml" className="text-green-200">
                       {`Info Cell:
     Type Script:
         code hash: "..."
         hash type: "type"
         args: "typeid + clients count + flags"
     Data: 
-        - tip client cell id`}
-                    </pre>
+        - tip client cell id`}</CodeBlock>
                   </div>
                 </div>
 
