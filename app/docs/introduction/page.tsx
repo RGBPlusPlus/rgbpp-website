@@ -11,7 +11,7 @@ export default function IntroductionPage() {
   return (
     <DocLayout
       title="Introduction"
-      description="Learn about RGB++ Protocol, the revolutionary technology that unifies Bitcoin's security with CKB's programmability through isomorphic binding."
+      description="Learn about RGB++ Protocol, the revolutionary technology that unifies Bitcoin's security with CKB's programmability."
     >
       <div className="space-y-12">
         {/* What is RGB++? */}
@@ -31,21 +31,8 @@ export default function IntroductionPage() {
               At its core, RGB++ Protocol uses a specific Bitcoin UTXO as a <strong className="text-white">single-use seal</strong> -
               a cryptographic commitment that can only be used once, leveraging Bitcoin's inherent UTXO properties.
               This UTXO, along with its corresponding CKB cells, serves as the cryptographic proof, or the commitment,
-              of ownership for RGB++ assets.
+              of ownership for RGB++ assets. When a single-use seal is consumed, the ownership of the RGB++ asset is guaranteed to be transferred to the new UTXO or the wallet controlling it.
             </p>
-
-            <div className="bg-gray-800/30 p-6 rounded-xl border border-gray-700/30">
-              <div className="flex items-start space-x-4">
-                <Shield className="h-6 w-6 text-orange-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-orange-300 mb-2">Key Innovation</h4>
-                  <p className="text-gray-300 text-sm">
-                    When a single-use seal is consumed, the ownership of the RGB++ asset is guaranteed to be
-                    transferred to the new UTXO or the wallet controlling it, ensuring cryptographic security.
-                  </p>
-                </div>
-              </div>
-            </div>
 
             <p className="text-gray-300 text-lg leading-relaxed">
               The protocol employs CKB Cells to represent RGB++ asset ownership relationships, establishing an
@@ -57,6 +44,28 @@ export default function IntroductionPage() {
               RGB++ Protocol unifies Bitcoin's security with CKB's programmability, enabling sophisticated
               applications directly on Bitcoin. Developers can now create advanced smart contracts that power
               decentralized applications, from IDO platforms to liquid staking pools, and more.
+            </p>
+
+            <p className="text-gray-300 text-lg leading-relaxed">
+              For more detailed information, please refer to the{' '}
+              <a
+                href="https://talk.nervos.org/t/rgb-protocol-light-paper-translation/7790"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-400 hover:text-orange-300 underline"
+              >
+                RGB++ Protocol Light Paper
+              </a>{' '}
+              or its{' '}
+              <a
+                href="https://talk.nervos.org/t/rgb-protocol-light-paper/7733"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-400 hover:text-orange-300 underline"
+              >
+                Chinese version
+              </a>
+              .
             </p>
           </div>
         </section>
@@ -81,7 +90,6 @@ export default function IntroductionPage() {
                   <li>• UTXO management and single-use seals</li>
                   <li>• Cryptographic commitments via OP_RETURN</li>
                   <li>• Asset ownership representation</li>
-                  <li>• Cross-chain transaction initiation</li>
                 </ul>
               </CardContent>
             </Card>
@@ -98,78 +106,12 @@ export default function IntroductionPage() {
                   <li>• Programmable scripts and smart contracts</li>
                   <li>• Asset state management and validation</li>
                   <li>• Public database for RGB++ assets</li>
-                  <li>• Off-chain pre-settlement layer</li>
                 </ul>
               </CardContent>
             </Card>
           </div>
         </section>
 
-        {/* Blockchain-Enhanced State Validation */}
-        <section>
-          <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-            <CheckCircle className="h-8 w-8 mr-3 text-green-400" />
-            Blockchain-Enhanced State Validation
-          </h2>
-          <div className="space-y-6">
-            <p className="text-gray-300 text-lg leading-relaxed">
-              The concept of creating and managing assets on Bitcoin has been a long-standing pursuit in the
-              cryptocurrency space. While Bitcoin's UTXO model provides a robust foundation for value transfer,
-              its intentionally limited scripting system falls short in implementing the sophisticated security
-              validations required for complex asset management.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-white/5 backdrop-blur-xl border-white/10">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-white">
-                    <Database className="h-6 w-6 mr-2 text-blue-400" />
-                    Traditional RGB Approach
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li>• Client-side validation</li>
-                    <li>• Complex transaction history maintenance</li>
-                    <li>• Difficulty providing transaction proofs</li>
-                    <li>• Resource-intensive for simple clients</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/5 backdrop-blur-xl border-white/10">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-white">
-                    <Zap className="h-6 w-6 mr-2 text-green-400" />
-                    RGB++ Innovation
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li>• On-chain security checks via CKB</li>
-                    <li>• Straightforward verification process</li>
-                    <li>• System transparency maintained</li>
-                    <li>• Reduced burden on end users</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="bg-gray-800/30 p-6 rounded-xl border border-gray-700/30">
-              <div className="flex items-start space-x-4">
-                <Shield className="h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-green-300 mb-2">Enhanced Security Model</h4>
-                  <p className="text-gray-300 text-sm">
-                    RGB++ leverages CKB's Turing-complete script system to implement asset security checks.
-                    Users only need to verify relevant transactions on CKB to confirm the correctness of
-                    RGB++ transaction state calculations, significantly reducing complexity.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Typical Transaction Flow */}
         <section>
@@ -229,18 +171,7 @@ export default function IntroductionPage() {
               ))}
             </div>
 
-            <div className="bg-gray-800/30 p-6 rounded-xl border border-gray-700/30">
-              <div className="flex items-start space-x-4">
-                <Lock className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-blue-300 mb-2">Isomorphic Binding</h4>
-                  <p className="text-gray-300 text-sm">
-                    The commitment formula: <code className="bg-black/20 px-2 py-1 rounded text-xs">commitment = hash(CKB_TX_B | btc_utxo#1 | btc_utxo#2)</code>
-                    <br />This establishes a secure binding between Bitcoin UTXOs and CKB cells through RGB++ Script arguments.
-                  </p>
-                </div>
-              </div>
-            </div>
+
           </div>
         </section>
 
@@ -325,10 +256,6 @@ export default function IntroductionPage() {
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Robust P2P Network infrastructure</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
                     <span>Mature Virtual Machines and Contract Languages</span>
                   </li>
                   <li className="flex items-start space-x-3">
@@ -380,6 +307,8 @@ export default function IntroductionPage() {
             </Link>
           </div>
         </section>
+
+
       </div>
     </DocLayout>
   )
