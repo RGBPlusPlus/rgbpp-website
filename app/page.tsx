@@ -1,25 +1,16 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ArrowRight, Book, Code, Terminal, FileText, GitBranch, Layers, Shield, ExternalLink, Activity, Box, Link2, Database, Zap, Copy, CheckCircle, Users, Network } from "lucide-react"
+import { ArrowRight, Book, Layers, Shield, Activity, Link2, Users } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 
 
 export default function HomePage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null)
-
-  const handleCopyCode = (code: string, id: string) => {
-    navigator.clipboard.writeText(code)
-    setCopiedCode(id)
-    setTimeout(() => setCopiedCode(null), 2000)
-  }
 
   const steps = [
     {
@@ -282,10 +273,8 @@ export default function HomePage() {
       </section>
 
       {/* Ecosystem Partners */}
-      <section className="py-10 px-2 relative overflow-hidden bg-gradient-to-b from-black/50 to-gray-950/80">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-green-500/5 to-blue-500/5 blur-3xl"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(243,103,79,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(56,229,57,0.1),transparent_50%)]"></div>
+      <section className="py-10 px-2 lg:px-8 relative overflow-hidden bg-gradient-to-b from-gray-950/50 to-black/50">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/3 via-green-500/3 to-blue-500/3 blur-3xl"></div>
 
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
@@ -298,39 +287,60 @@ export default function HomePage() {
           </div>
 
           {/* Featured Partners */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6 mb-12">
             {[
-              { name: "BIT Network", domain: "bit.network", category: "RWA", featured: true, gradient: "from-blue-500 to-purple-600" },
-              { name: "Nervape", domain: "nervape.com", category: "Metaverse", featured: true, gradient: "from-purple-500 to-pink-600" },
               { name: "Gate.io", domain: "gate.io", category: "Exchange", featured: true, gradient: "from-green-500 to-blue-600" },
-              { name: "Wizz", domain: "wizz.cash", category: "Wallet", featured: true, gradient: "from-orange-500 to-red-600" },
-              { name: "DOBBY", domain: "dobby.market", category: "Marketplace", featured: true, gradient: "from-cyan-500 to-blue-600" },
-              { name: "SuperEx", domain: "superex.com", category: "Exchange", featured: true, gradient: "from-indigo-500 to-purple-600" }
+              { name: "CoinEx", domain: "coinex.com", category: "Exchange", featured: true, gradient: "from-indigo-500 to-purple-600" },
+              { name: "Wizz Cash", domain: "wizz.cash", faviconDomain: "wizzwallet.io", category: "Wallet", featured: true, gradient: "from-orange-500 to-red-600" },
+              { name: "JoyID", domain: "joy.id", category: "Wallet", featured: true, gradient: "from-cyan-500 to-blue-600" },
+              { name: "UTXO Global", domain: "utxo.global", category: "Wallet", featured: true, gradient: "from-blue-500 to-purple-600" },
+              { name: "Nervape Studio", domain: "nervape.com", category: "Metaverse", featured: true, gradient: "from-purple-500 to-pink-600" }
             ].map((partner, index) => {
-              const colors = ['orange-500', 'green-500', 'blue-500'];
-              const color = colors[index % 3];
+              const partnerWithFavicon = partner as { faviconUrl?: string; faviconDomain?: string; domain: string; name: string };
               return (
-                <Card key={index} className="group relative bg-gradient-to-br from-gray-900/60 to-gray-800/40 backdrop-blur-xl border border-gray-700/50 hover:border-orange-400/60 transition-all duration-500 cursor-pointer overflow-hidden transform hover:scale-105 hover:-translate-y-1 shadow-lg shadow-gray-900/30">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${partner.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  <CardContent className="p-4 relative z-10">
-                    <div className="flex items-start justify-between mb-3">
-                      <div className={`w-8 h-8 bg-gradient-to-br ${partner.gradient} rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-${color}/25 transition-all duration-500`}>
-                        <span className="text-white font-bold text-sm">{partner.name.charAt(0)}</span>
+                <a
+                  key={index}
+                  href={`https://${partner.domain}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Card className="group relative bg-gradient-to-br from-gray-900/60 to-gray-800/40 backdrop-blur-xl border border-gray-700/50 hover:border-orange-400/60 transition-all duration-500 cursor-pointer overflow-hidden transform hover:scale-105 hover:-translate-y-1 shadow-lg shadow-gray-900/30">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${partner.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <CardContent className="p-4 lg:px-6 relative z-10">
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="w-8 h-8 bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-white/20 transition-all duration-500 overflow-hidden border border-white/20">
+                          <img
+                            src={partnerWithFavicon.faviconUrl || `https://www.google.com/s2/favicons?domain=${partnerWithFavicon.faviconDomain || partner.domain}&sz=32`}
+                            alt={`${partner.name} favicon`}
+                            className="w-5 h-5 object-contain"
+                            onError={(e) => {
+                              e.currentTarget.style.display = 'none';
+                              const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                              if (fallback) {
+                                fallback.style.display = 'flex';
+                              }
+                            }}
+                          />
+                          <div className={`hidden w-full h-full bg-gradient-to-br ${partner.gradient} rounded-lg flex items-center justify-center`}>
+                            <span className="text-white font-bold text-sm">{partner.name.charAt(0)}</span>
+                          </div>
+                        </div>
+                        <Badge className="bg-gradient-to-r from-orange-500/20 to-green-500/20 text-orange-200 border-orange-500/30 px-2 py-0.5 text-xs">
+                          {partner.category}
+                        </Badge>
                       </div>
-                      <Badge className="bg-gradient-to-r from-orange-500/20 to-green-500/20 text-orange-200 border-orange-500/30 px-2 py-0.5 text-xs">
-                        {partner.category}
-                      </Badge>
-                    </div>
-                    <h4 className="text-sm font-bold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
-                      {partner.name}
-                    </h4>
-                    <p className="text-gray-300 font-mono text-xs break-all">
-                      {partner.domain}
-                    </p>
-                  </CardContent>
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                </Card>
+                      <h4 className="text-sm font-bold text-white mb-2 group-hover:text-orange-400 transition-colors duration-300">
+                        {partner.name}
+                      </h4>
+                      <p className="text-gray-300 font-mono text-xs break-all">
+                        {partner.domain}
+                      </p>
+                    </CardContent>
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 via-green-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  </Card>
+                </a>
               );
             })}
           </div>
@@ -341,28 +351,28 @@ export default function HomePage() {
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-green-500 to-blue-500 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
               <Link href="/partners">
-                                  <Button
-                    className="relative bg-gradient-to-r from-orange-500/90 via-green-500/70 to-blue-500/90 hover:from-orange-500 hover:via-green-500 hover:to-blue-500 text-white lg:px-8 py-4 text-base font-medium rounded-full shadow-2xl hover:shadow-orange-500/30 transition-all duration-500 group border border-gray-600/20 hover:border-orange-400/40 backdrop-blur-sm"
-                  >
-                    <div className="flex items-center">
-                      <Users className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="group-hover:tracking-wide transition-all duration-300">Discover All Partners</span>
-                      <div className="flex items-center ml-3">
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                        <div className="flex ml-2 space-x-1">
-                          <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse"></div>
-                          <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                          <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                        </div>
+                <Button
+                  className="relative bg-gradient-to-r from-orange-500/90 via-green-500/70 to-blue-500/90 hover:from-orange-500 hover:via-green-500 hover:to-blue-500 text-white lg:px-8 py-4 text-base font-medium rounded-full shadow-2xl hover:shadow-orange-500/30 transition-all duration-500 group border border-gray-600/20 hover:border-orange-400/40 backdrop-blur-sm"
+                >
+                  <div className="flex items-center">
+                    <Users className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                    <span className="group-hover:tracking-wide transition-all duration-300">Discover All Partners</span>
+                    <div className="flex items-center ml-3">
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      <div className="flex ml-2 space-x-1">
+                        <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse"></div>
+                        <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                        <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
                       </div>
                     </div>
+                  </div>
 
-                    {/* Ripple Effect */}
-                    <div className="absolute inset-0 rounded-full overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
-                    </div>
-                  </Button>
-                </Link>
+                  {/* Ripple Effect */}
+                  <div className="absolute inset-0 rounded-full overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+                  </div>
+                </Button>
+              </Link>
             </div>
 
             {/* Subtle hint text */}
@@ -375,6 +385,7 @@ export default function HomePage() {
 
       {/* Documentation CTA Section */}
       <section className="py-20 px-2 bg-gradient-to-b from-gray-950/50 to-black/50 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/3 via-green-500/3 to-blue-500/3 blur-3xl"></div>
         <div className="container mx-auto max-w-3xl relative">
           <div className="text-center space-y-12">
             <div className="space-y-6">
