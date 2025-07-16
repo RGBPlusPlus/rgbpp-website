@@ -301,7 +301,7 @@ outputs:
                     <Button variant="cyber" effect="shimmer" className="w-full" asChild>
                       <a href="https://github.com/RGBPlusPlus/RGBPlusPlus-design/blob/main/docs/lockscript-design-prd-cn.md" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        RGB++ Script Standard (中文)
+                        RGB++ 合约规范
                       </a>
                     </Button>
                   </div>

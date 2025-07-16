@@ -32,8 +32,8 @@ export default function SourceCodePage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
-                  <span className="text-gray-300">English Version</span>
-                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
+                  <span className="text-gray-300 text-sm sm:text-base">English Version</span>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://talk.nervos.org/t/rgb-protocol-light-paper-translation/7790" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-3 w-3 mr-1" />
                       Read
@@ -41,8 +41,8 @@ export default function SourceCodePage() {
                   </Button>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
-                  <span className="text-gray-300">中文版本</span>
-                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
+                  <span className="text-gray-300 text-sm sm:text-base">中文版本</span>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://talk.nervos.org/t/rgb-protocol-light-paper/7733" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-3 w-3 mr-1" />
                       阅读
@@ -65,7 +65,7 @@ export default function SourceCodePage() {
                     <div className="text-gray-300 font-medium">RGB++ Explorer</div>
                     <div className="text-xs text-gray-500">Block explorer for RGB++ transactions and assets</div>
                   </div>
-                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://explorer.rgbpp.io/" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-3 w-3 mr-1" />
                       Visit
@@ -77,7 +77,7 @@ export default function SourceCodePage() {
                     <div className="text-gray-300 font-medium">btc-assets-api</div>
                     <div className="text-xs text-gray-500">API service for BTC/RGB++ asset management</div>
                   </div>
-                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10" asChild>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://github.com/RGBPlusPlus/btc-assets-api" target="_blank" rel="noopener noreferrer">
                       <GitBranch className="h-3 w-3 mr-1" />
                       GitHub
@@ -109,29 +109,29 @@ export default function SourceCodePage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
-                  <span className="text-gray-300">RGB++ Script Standard (English)</span>
-                  <Button size="sm" variant="cyber" effect="shimmer" asChild>
+                  <span className="text-gray-300">RGB++ Script Standard</span>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://github.com/RGBPlusPlus/RGBPlusPlus-design/blob/main/docs/lockscript-design-prd-en.md" target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" />
-                      Docs
+                      Read
                     </a>
                   </Button>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
-                  <span className="text-gray-300">RGB++ Script Standard (中文)</span>
-                  <Button size="sm" variant="cyber" effect="shimmer" asChild>
+                  <span className="text-gray-300">RGB++ 合约规范</span>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://github.com/RGBPlusPlus/RGBPlusPlus-design/blob/main/docs/lockscript-design-prd-cn.md" target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" />
-                      文档
+                      阅读
                     </a>
                   </Button>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
                   <span className="text-gray-300">RGB++ Script Repository</span>
-                  <Button size="sm" variant="cyber" effect="shimmer" asChild>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://github.com/RGBPlusPlus/rgbpp" target="_blank" rel="noopener noreferrer">
                       <GitBranch className="h-3 w-3 mr-1" />
-                      Code
+                      GitHub
                     </a>
                   </Button>
                 </div>
@@ -151,7 +151,7 @@ export default function SourceCodePage() {
               <CardContent className="space-y-3">
                 <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
                   <span className="text-gray-300">CKB Bitcoin SPV Design</span>
-                  <Button size="sm" variant="cyber" effect="shimmer" asChild>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv/blob/master/docs/Design.md" target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" />
                       Design
@@ -160,28 +160,28 @@ export default function SourceCodePage() {
                 </div>
                 <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
                   <span className="text-gray-300">CKB Bitcoin SPV Contracts</span>
-                  <Button size="sm" variant="cyber" effect="shimmer" asChild>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv-contracts" target="_blank" rel="noopener noreferrer">
                       <GitBranch className="h-3 w-3 mr-1" />
-                      Code
+                      GitHub
                     </a>
                   </Button>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
                   <span className="text-gray-300">CKB Bitcoin SPV Library</span>
-                  <Button size="sm" variant="cyber" effect="shimmer" asChild>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv" target="_blank" rel="noopener noreferrer">
                       <GitBranch className="h-3 w-3 mr-1" />
-                      Code
+                      GitHub
                     </a>
                   </Button>
                 </div>
                 <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
                   <span className="text-gray-300">CKB Bitcoin SPV Service</span>
-                  <Button size="sm" variant="cyber" effect="shimmer" asChild>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                     <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv-service" target="_blank" rel="noopener noreferrer">
                       <GitBranch className="h-3 w-3 mr-1" />
-                      Code
+                      GitHub
                     </a>
                   </Button>
                 </div>
@@ -209,11 +209,11 @@ export default function SourceCodePage() {
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
-                <div className="flex items-center">
-                  <span className="text-gray-300">RGB++ SDK (Primary SDK)</span>
-                  <Badge variant="outline" className="text-xs ml-2 border-green-500/30 text-green-400">Recommended</Badge>
+                <div className="flex flex-col sm:flex-row sm:items-center min-w-0">
+                  <span className="text-gray-300 text-sm sm:text-base">RGB++ SDK (Primary SDK)</span>
+                  <Badge variant="outline" className="text-xs mt-1 sm:mt-0 sm:ml-2 self-start sm:self-auto border-green-500/30 text-green-400 whitespace-nowrap">Recommended</Badge>
                 </div>
-                <Button size="sm" variant="cyber" effect="shimmer" asChild>
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                   <a href="https://github.com/ckb-devrel/ccc/tree/rgbpp-sdk" target="_blank" rel="noopener noreferrer">
                     <GitBranch className="h-3 w-3 mr-1" />
                     TypeScript
@@ -221,8 +221,10 @@ export default function SourceCodePage() {
                 </Button>
               </div>
               <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
-                <span className="text-gray-300">RGB++ SDK (Legacy SDK)</span>
-                <Button size="sm" variant="cyber" effect="shimmer" asChild>
+                <div className="flex flex-col sm:flex-row sm:items-center min-w-0">
+                  <span className="text-gray-300 text-sm sm:text-base">RGB++ SDK (Legacy SDK)</span>
+                </div>
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                   <a href="https://github.com/RGBPlusPlus/rgbpp-sdk" target="_blank" rel="noopener noreferrer">
                     <GitBranch className="h-3 w-3 mr-1" />
                     TypeScript
@@ -254,9 +256,9 @@ export default function SourceCodePage() {
               <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg hover:bg-black/30 transition-colors">
                 <div>
                   <div className="text-gray-300 text-sm">从 RGB 到 RGB++</div>
-                  <div className="text-xs text-gray-500">CKB如何赋能比特币生态资产协议</div>
+                  <div className="text-xs text-gray-500">CKB 如何赋能比特币生态资产协议</div>
                 </div>
-                <Button size="sm" variant="cyber" effect="shimmer" asChild>
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
                   <a href="https://talk.nervos.org/t/rgb-rgb-ckb/7791/1" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-3 w-3 mr-1" />
                     阅读
