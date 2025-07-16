@@ -572,7 +572,7 @@ export default function SourceCodePage() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/docs/concepts">
+              <Link href="/docs/single-use-seal">
                 <Button variant="cyber" effect="scale">
                   <Book className="mr-2 h-4 w-4" />
                   Core Concepts

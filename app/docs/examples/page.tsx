@@ -42,14 +42,14 @@ export default function ExamplesPage() {
       <Header />
 
       <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Breadcrumb */}
+        {/* Breadcrumb
         <div className="flex items-center space-x-2 text-sm text-gray-400 mb-8 animate-fade-in-up">
           <Link href="/" className="hover:text-orange-400 transition-colors duration-300">
             Home
           </Link>
           <span>/</span>
           <span className="text-white">RGB++ Examples & Use Cases</span>
-        </div>
+        </div> */}
 
         {/* Page Header */}
         <div className="mb-16 text-center animate-fade-in-up animation-delay-200">
