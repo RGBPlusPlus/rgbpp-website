@@ -324,33 +324,7 @@ export default function SPVServicePage() {
           </Card>
         </section>
 
-        {/* Navigation */}
-        <section className="bg-gradient-to-r from-gray-500/10 to-slate-500/10 p-8 rounded-xl border border-gray-500/20">
-          <h3 className="text-2xl font-bold text-white mb-4">Continue Learning</h3>
-          <p className="text-gray-300 mb-6">
-            Now that you understand SPV Service, explore other core components and learn how to implement RGB++ in practice.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/docs/components">
-              <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10">
-                <ArrowRight className="mr-2 h-4 w-4 rotate-180" />
-                Back to RGB++ Scripts
-              </Button>
-            </Link>
-            <Link href="/docs/rgbpp-sdk">
-              <Button className="bg-blue-500 hover:bg-blue-600">
-                RGB++ SDK
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-            <Link href="/docs/quickstart">
-              <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10">
-                Quick Start Guide
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </section>
+
       </div>
     </DocLayout>
   )

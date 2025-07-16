@@ -4,8 +4,7 @@ import { DocLayout } from "@/components/doc-layout"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Hash, ExternalLink, ArrowLeft, ArrowRight } from "lucide-react"
-import NextLink from "next/link"
+import { Hash, ExternalLink } from "lucide-react"
 
 export default function MMRPage() {
   return (
@@ -145,21 +144,7 @@ export default function MMRPage() {
           </CardContent>
         </Card>
 
-        {/* Navigation */}
-        <div className="flex justify-between items-center pt-8 border-t border-white/10">
-          <NextLink href="/docs/glossary/spv">
-            <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Previous: SPV
-            </Button>
-          </NextLink>
-          <NextLink href="/docs/glossary/merkle-root">
-            <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10">
-              Next: Merkle Root
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </NextLink>
-        </div>
+
       </div>
     </DocLayout>
   )

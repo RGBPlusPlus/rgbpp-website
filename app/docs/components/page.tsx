@@ -334,33 +334,7 @@ outputs:
           </Card>
         </section>
 
-        {/* Navigation */}
-        <section className="bg-gradient-to-r from-gray-500/10 to-slate-500/10 p-8 rounded-xl border border-gray-500/20">
-          <h3 className="text-2xl font-bold text-white mb-4">Continue Learning</h3>
-          <p className="text-gray-300 mb-6">
-            Now that you understand RGB++ Scripts, explore other core components and learn how to implement RGB++ in practice.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/docs/state-validation">
-              <Button variant="cyber" effect="scale">
-                <ArrowRight className="mr-2 h-4 w-4 rotate-180" />
-                Back to State Validation
-              </Button>
-            </Link>
-            <Link href="/docs/quickstart">
-              <Button variant="gradient" effect="scale" className="shadow-lg shadow-blue-500/30">
-                Quick Start Guide
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-            <Link href="/docs/resources">
-              <Button variant="glass" effect="scale">
-                View Resources
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </section>
+
       </div>
     </DocLayout>
   )

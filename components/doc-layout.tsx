@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Network, Book, Zap, Cpu, FileText, Code, Layers, ArrowLeft, Lock, Shield, Server, Hash, Database, Link as LinkIcon, Menu, X, ChevronDown, ChevronRight } from "lucide-react"
 import Header from "./header"
+import { DocNavigation } from "./doc-navigation"
 
 interface DocLayoutProps {
   children: ReactNode
@@ -172,6 +173,9 @@ export function DocLayout({ children, title, description }: DocLayoutProps) {
             <div className="prose prose-invert max-w-none prose-sm sm:prose-base lg:prose-lg">
               {children}
             </div>
+
+            {/* Navigation */}
+            <DocNavigation />
           </div>
         </main>
       </div>

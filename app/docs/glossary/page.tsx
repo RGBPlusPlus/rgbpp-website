@@ -310,26 +310,7 @@ OP_PUSHBYTES_11
           <p className="text-gray-300 mb-6">
             Now that you're familiar with the key terms, explore the RGB++ Protocol documentation and start building.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <NextLink href="/docs/introduction">
-              <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10">
-                <ArrowRight className="mr-2 h-4 w-4 rotate-180" />
-                Back to Introduction
-              </Button>
-            </NextLink>
-            <NextLink href="/docs/quickstart">
-              <Button className="bg-blue-500 hover:bg-blue-600">
-                Quick Start Guide
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </NextLink>
-            <NextLink href="/docs/resources">
-              <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10">
-                View Resources
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </NextLink>
-          </div>
+
         </section>
       </div>
     </DocLayout>

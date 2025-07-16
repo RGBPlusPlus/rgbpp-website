@@ -557,36 +557,7 @@ export default function SourceCodePage() {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-8 rounded-xl border border-purple-500/20">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">Start Building with RGB++</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Ready to dive into RGB++ development? Start with our quick start guide or explore the core concepts to understand the protocol better.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/docs/quickstart">
-                <Button variant="gradient" effect="scale" className="shadow-lg shadow-purple-500/30">
-                  <Zap className="mr-2 h-4 w-4" />
-                  Quick Start Guide
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="/docs/single-use-seal">
-                <Button variant="cyber" effect="scale">
-                  <Book className="mr-2 h-4 w-4" />
-                  Core Concepts
-                </Button>
-              </Link>
-              <Link href="/docs/introduction">
-                <Button variant="glass" effect="scale">
-                  <Bitcoin className="mr-2 h-4 w-4" />
-                  Introduction
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
+
       </div>
     </DocLayout>
   )

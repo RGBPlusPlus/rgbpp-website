@@ -279,34 +279,7 @@ export default function IntroductionPage() {
           </div>
         </section>
 
-        {/* Next Steps */}
-        <section className="bg-gray-800/30 p-8 rounded-xl border border-gray-700/30">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-          <p className="text-gray-300 mb-6">
-            Now that you understand what RGB++ is and how it works, explore the ecosystem and start building with Bitcoin's programmable layer.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/docs/quickstart">
-              <Button className="bg-orange-500 hover:bg-orange-600">
-                <Zap className="mr-2 h-4 w-4" />
-                Quick Start Guide
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-            <Link href="/docs/single-use-seal">
-              <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10">
-                <Book className="mr-2 h-4 w-4" />
-                Core Concepts
-              </Button>
-            </Link>
-            <Link href="/docs/resources">
-              <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10">
-                <Code className="mr-2 h-4 w-4" />
-                Resources & Code
-              </Button>
-            </Link>
-          </div>
-        </section>
+
 
 
       </div>
