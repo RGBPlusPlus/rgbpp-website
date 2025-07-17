@@ -36,12 +36,12 @@ export default function SPVServicePage() {
                 <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
                   <h3 className="font-semibold text-blue-300 mb-4 text-xl">Core Functions</h3>
                   <div className="space-y-3">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">1</div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">1</div>
                       <p className="text-blue-200 text-sm">Prove if a header belongs to the Bitcoin chain</p>
                     </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">2</div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">2</div>
                       <p className="text-blue-200 text-sm">Prove if a transaction is in a Bitcoin block</p>
                     </div>
                   </div>
@@ -50,12 +50,12 @@ export default function SPVServicePage() {
                 <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 p-6 rounded-xl border border-green-500/20">
                   <h3 className="font-semibold text-green-300 mb-4 text-xl">Implementation</h3>
                   <div className="space-y-3">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">1</div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">1</div>
                       <p className="text-green-200 text-sm">Synchronizes Bitcoin headers to SPV clients on CKB</p>
                     </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">2</div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">2</div>
                       <p className="text-green-200 text-sm">Generate proofs for Bitcoin transactions verification</p>
                     </div>
                   </div>
@@ -90,13 +90,6 @@ export default function SPVServicePage() {
                     MMR provides a compact representation of the entire header chain with efficient verification capabilities,
                     making it ideal for resource-constrained environments.
                   </p>
-                  <div className="bg-black/30 p-3 rounded-lg">
-                    <p className="text-purple-200 text-xs">
-                      ✓ Efficient storage<br />
-                      ✓ Fast verification<br />
-                      ✓ Resource optimized
-                    </p>
-                  </div>
                 </div>
 
                 <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-6 rounded-xl border border-orange-500/20">
@@ -107,13 +100,6 @@ export default function SPVServicePage() {
                   <p className="text-orange-200 text-sm leading-relaxed mb-4">
                     Merkle proof is used to verify that a transaction - or specifically, its hash - was included in a given block.
                   </p>
-                  <div className="bg-black/30 p-3 rounded-lg">
-                    <p className="text-orange-200 text-xs">
-                      ✓ Transaction inclusion proof<br />
-                      ✓ Cryptographic security<br />
-                      ✓ Minimal data requirements
-                    </p>
-                  </div>
                 </div>
               </div>
             </CardContent>
@@ -151,10 +137,9 @@ export default function SPVServicePage() {
                   SPV client cells store the Bitcoin state. Each Bitcoin SPV instance includes a minimum of three SPV client cells.
                 </p>
 
-                <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 p-6 rounded-xl border border-cyan-500/20">
-                  <h4 className="font-semibold text-cyan-300 mb-3 text-lg">Cell Structure</h4>
-                  <div className="bg-black/30 p-4 rounded-lg">
-                    <CodeBlock language="yaml" className="text-cyan-200">{`Client Cell:  
+                <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl border border-cyan-500/20">
+                  <h4 className="font-semibold text-cyan-300 mb-3 text-lg px-6 pt-6">Cell Structure</h4>
+                  <CodeBlock language="yaml" className="text-cyan-200 p-4 rounded-lg">{`Client Cell:  
     Type Script:
         code hash: "..."
         hash type: "type"
@@ -164,18 +149,8 @@ export default function SPVServicePage() {
         - btc tip block hash
         - btc headers mmr root
         - target adjust info`}</CodeBlock>
-                  </div>
                 </div>
 
-                <div className="bg-black/20 p-4 rounded-xl border border-white/10">
-                  <h5 className="font-semibold text-white mb-3">Key Features</h5>
-                  <ul className="text-gray-300 text-sm space-y-2">
-                    <li>• Stores Bitcoin blockchain state</li>
-                    <li>• Minimum of 3 cells per SPV instance</li>
-                    <li>• Contains MMR roots for verification</li>
-                    <li>• Manages target adjustment information</li>
-                  </ul>
-                </div>
               </CardContent>
             </Card>
 
@@ -193,29 +168,18 @@ export default function SPVServicePage() {
                   Each Bitcoin SPV instance contains only one SPV info cell.
                 </p>
 
-                <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 p-6 rounded-xl border border-green-500/20">
-                  <h4 className="font-semibold text-green-300 mb-3 text-lg">Cell Structure</h4>
-                  <div className="bg-black/30 p-4 rounded-lg">
-                    <CodeBlock language="yaml" className="text-green-200">
-                      {`Info Cell:
+                <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl border border-green-500/20">
+                  <h4 className="font-semibold text-green-300 mb-3 text-lg px-6 pt-6">Cell Structure</h4>
+                  <CodeBlock language="yaml" className="text-green-200 p-4 rounded-lg">
+                    {`Info Cell:
     Type Script:
         code hash: "..."
         hash type: "type"
         args: "typeid + clients count + flags"
     Data: 
         - tip client cell id`}</CodeBlock>
-                  </div>
                 </div>
 
-                <div className="bg-black/20 p-4 rounded-xl border border-white/10">
-                  <h5 className="font-semibold text-white mb-3">Characteristics</h5>
-                  <ul className="text-gray-300 text-sm space-y-2">
-                    <li>• One per SPV instance</li>
-                    <li>• Contains tip client cell ID</li>
-                    <li>• Manages current state pointer</li>
-                    <li>• Coordinates client cell updates</li>
-                  </ul>
-                </div>
               </CardContent>
             </Card>
           </div>
@@ -276,49 +240,32 @@ export default function SPVServicePage() {
                 Technical Resources
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
-                  <h4 className="font-semibold text-blue-300 mb-4 flex items-center">
-                    <ExternalLink className="h-5 w-5 mr-2" />
-                    Design Documentation
-                  </h4>
-                  <div className="space-y-3">
-                    <a href="https://github.com/RGBPlusPlus/RGBPlusPlus-design/blob/main/docs/ckb-bitcoin-spv-design.md" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        CKB Bitcoin SPV Design
-                      </Button>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 p-6 rounded-xl border border-green-500/20">
-                  <h4 className="font-semibold text-green-300 mb-4 flex items-center">
-                    <GitBranch className="h-5 w-5 mr-2" />
-                    Implementation
-                  </h4>
-                  <div className="space-y-3">
-                    <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv-contracts" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
-                        <GitBranch className="h-4 w-4 mr-2" />
-                        SPV Type Script Contracts
-                      </Button>
-                    </a>
-                    <a href="https://github.com/RGBPlusPlus/bitcoin-spv" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
-                        <GitBranch className="h-4 w-4 mr-2" />
-                        Bitcoin SPV Library
-                      </Button>
-                    </a>
-                    <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv-service" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
-                        <GitBranch className="h-4 w-4 mr-2" />
-                        CKB Bitcoin SPV Service
-                      </Button>
-                    </a>
-                  </div>
-                </div>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="https://github.com/RGBPlusPlus/RGBPlusPlus-design/blob/main/docs/ckb-bitcoin-spv-design.md" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="w-full justify-start text-left border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                    <ExternalLink className="h-4 w-4 mr-3 flex-shrink-0" />
+                    <span className="truncate">CKB Bitcoin SPV Design</span>
+                  </Button>
+                </a>
+                <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv-contracts" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="w-full justify-start text-left border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                    <GitBranch className="h-4 w-4 mr-3 flex-shrink-0" />
+                    <span className="truncate">SPV Type Script Contracts</span>
+                  </Button>
+                </a>
+                <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="w-full justify-start text-left border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                    <GitBranch className="h-4 w-4 mr-3 flex-shrink-0" />
+                    <span className="truncate">Bitcoin SPV Library</span>
+                  </Button>
+                </a>
+                <a href="https://github.com/RGBPlusPlus/ckb-bitcoin-spv-service" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="w-full justify-start text-left border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                    <GitBranch className="h-4 w-4 mr-3 flex-shrink-0" />
+                    <span className="truncate">CKB Bitcoin SPV Service</span>
+                  </Button>
+                </a>
               </div>
             </CardContent>
           </Card>

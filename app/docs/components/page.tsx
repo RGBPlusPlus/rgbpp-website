@@ -26,34 +26,34 @@ export default function ComponentsPage() {
             </CardHeader>
             <CardContent className="space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
-                As described in the Typical Transaction Flow section, isomorphic binding requires that RGB++ transactions must be submitted on the Bitcoin chain,
+                Isomorphic binding requires that RGB++ transactions must be submitted on the Bitcoin chain,
                 and that users utilize single-use seals on Bitcoin to describe operations on RGB++ cells.
               </p>
 
               <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
                 <h3 className="font-semibold text-blue-300 mb-4 text-xl">Transaction Process</h3>
                 <div className="space-y-3">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">1</div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">1</div>
                     <p className="text-blue-200 text-sm">User constructs the CKB raw transaction and the RGB++ commitment</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">2</div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">2</div>
                     <p className="text-blue-200 text-sm">Submits Bitcoin transaction that contains the commitment</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">3</div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">3</div>
                     <p className="text-blue-200 text-sm">Submits the final CKB transaction</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-black/20 p-6 rounded-xl border border-white/10">
-                <p className="text-gray-300 leading-relaxed">
-                  The ownership of Bitcoin UTXOs is encoded in the lock script of RGB++ Cells, specified by the combination of the Bitcoin transaction ID and output index.
-                  Regarding the commitment calculation, it encompasses the first N consecutive inputs and outputs, where N must include all inputs and outputs with non-null Type scripts.
-                </p>
-              </div>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                The ownership of Bitcoin UTXOs is encoded in the lock script of RGB++ Cells, specified by the combination of the Bitcoin transaction ID and output index.
+              </p>
+              <p className="text-gray-300 leading-relaxed text-lg">
+                Regarding the commitment calculation, it encompasses the first <code className="bg-gray-800 px-1.5 py-0.5 rounded text-sm text-orange-300">N</code> consecutive inputs and outputs, where <code className="bg-gray-800 px-1.5 py-0.5 rounded text-sm text-orange-300">N</code> must include all inputs and outputs with non-null <code className="bg-gray-800 px-1.5 py-0.5 rounded text-sm text-orange-300">Type</code> scripts. Any additional inputs and outputs with null <code className="bg-gray-800 px-1.5 py-0.5 rounded text-sm text-orange-300">Type</code> scripts that follow these first <code className="bg-gray-800 px-1.5 py-0.5 rounded text-sm text-orange-300">N</code> elements can be included in the CKB transaction without affecting the commitment. This design allows for flexible transaction fee adjustments while maintaining the integrity of the commitment.
+              </p>
             </CardContent>
           </Card>
         </section>
@@ -76,30 +76,20 @@ export default function ComponentsPage() {
                   A specialized contract that manages the unlocking mechanism for RGB++ Cells, ensuring secure and controlled access to the assets.
                 </p>
 
-                <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-6 rounded-xl border border-orange-500/20">
-                  <h4 className="font-semibold text-orange-300 mb-3 text-lg">Contract Structure</h4>
-                  <div className="bg-black/30 p-4 rounded-lg">
-                    <CodeBlock language="yaml" className="text-orange-200">{`RGBPP_lock:
+                <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-xl border border-orange-500/20 overflow-x-auto">
+                  <h4 className="font-semibold text-orange-300 mb-3 text-lg px-6 pt-6">Contract Structure</h4>
+                  <CodeBlock language="yaml" className="text-orange-200 p-4 rounded-lg">{`RGBPP_lock:
     code_hash:
         RGBPP_lock
     args:
         out_index | %bitcoin_tx%`}</CodeBlock>
-                  </div>
-                  <p className="text-orange-200 text-sm mt-3">
+                  <p className="text-orange-200 text-sm mt-3 px-6 pb-6">
                     The combination of <code className="bg-orange-500/20 px-2 py-1 rounded">out_index</code> and{" "}
                     <code className="bg-orange-500/20 px-2 py-1 rounded">bitcoin_tx</code> uniquely identifies the Bitcoin UTXO that owns this Cell.
                   </p>
                 </div>
 
-                <div className="bg-black/20 p-4 rounded-xl border border-white/10">
-                  <h5 className="font-semibold text-white mb-3">Key Features</h5>
-                  <ul className="text-gray-300 text-sm space-y-2">
-                    <li>• Manages unlocking mechanism for RGB++ Cells</li>
-                    <li>• Ensures secure and controlled asset access</li>
-                    <li>• Links Bitcoin UTXOs to CKB Cells</li>
-                    <li>• Validates commitment and transaction integrity</li>
-                  </ul>
-                </div>
+
               </CardContent>
             </Card>
 
@@ -117,13 +107,11 @@ export default function ComponentsPage() {
                   from Bitcoin Layer 1 to Layer 2, providing additional security for cross-layer transactions.
                 </p>
 
-                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 p-6 rounded-xl border border-green-500/20">
-                  <h4 className="font-semibold text-green-300 mb-3 text-lg">Contract Structure</h4>
-                  <div className="bg-black/30 p-4 rounded-lg">
-                    <CodeBlock language="yaml" className="text-green-200">{`BTC_TIME_lock:
+                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-xl border border-green-500/20 overflow-x-auto">
+                  <h4 className="font-semibold text-green-300 mb-3 text-lg px-6 pt-6">Contract Structure</h4>
+                  <CodeBlock language="yaml" className="text-green-200 p-4 rounded-lg">{`BTC_TIME_lock:
     args: lock_script | after | %new_bitcoin_tx%`}</CodeBlock>
-                  </div>
-                  <div className="mt-3 space-y-2 text-sm">
+                  <div className="mt-3 space-y-2 text-sm px-6 pb-6">
                     <p className="text-green-200">
                       • <code className="bg-green-500/20 px-2 py-1 rounded">lock_script</code> is the owner of the cell once the time lock is unlocked
                     </p>
@@ -133,15 +121,7 @@ export default function ComponentsPage() {
                   </div>
                 </div>
 
-                <div className="bg-black/20 p-4 rounded-xl border border-white/10">
-                  <h5 className="font-semibold text-white mb-3">Security Features</h5>
-                  <ul className="text-gray-300 text-sm space-y-2">
-                    <li>• Time-based locking mechanism</li>
-                    <li>• Block confirmation requirements</li>
-                    <li>• Cross-layer transaction security</li>
-                    <li>• Straightforward unlocking process</li>
-                  </ul>
-                </div>
+
               </CardContent>
             </Card>
           </div>
@@ -162,10 +142,10 @@ export default function ComponentsPage() {
                 To eliminate hardcoded dependencies and enhance configurability, the protocol introduces the concept of Config Cell.
               </p>
 
-              <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6 rounded-xl border border-purple-500/20">
-                <h4 className="font-semibold text-purple-300 mb-4 text-lg">RGBPPConfig Structure</h4>
-                <div className="bg-black/30 p-4 rounded-lg">
-                  <CodeBlock language="rust" className="text-purple-200">{`struct RGBPPConfig {
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-500/20 overflow-x-auto">
+                  <h4 className="font-semibold text-purple-300 mb-4 text-base sm:text-lg px-6 pt-6">RGBPPConfig Structure</h4>
+                  <CodeBlock language="rust" className="text-purple-200 text-xs sm:text-sm p-4 rounded-lg">{`struct RGBPPConfig {
   version: Uint16,
   // Type hash of bitcoin light client
   bitcoin_lc_type_hash: Byte32,
@@ -173,13 +153,10 @@ export default function ComponentsPage() {
   bitcoin_time_lock_type_hash: Byte32,
 }`}</CodeBlock>
                 </div>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-black/20 p-6 rounded-xl border border-white/10">
-                  <h4 className="font-semibold text-white mb-4">Deployment Process</h4>
-                  <div className="bg-black/30 p-4 rounded-lg">
-                    <CodeBlock language="yaml" className="text-gray-300">{`# BTC_TIME_lock
+                <div className="bg-black/20 rounded-xl border border-white/10 overflow-x-auto">
+                  <h4 className="font-semibold text-white mb-4 text-base sm:text-lg px-6 pt-6">Deployment Process</h4>
+                  <CodeBlock language="yaml" className="text-gray-300 text-xs sm:text-sm p-4 rounded-lg">{`# BTC_TIME_lock
 inputs: any cells
 outputs:
   BTC_TIME_lock code cell
@@ -190,24 +167,23 @@ inputs: any cells
 outputs:
   RGBPP_lock code cell
   rgb_lock_config cell`}</CodeBlock>
-                  </div>
                 </div>
+              </div>
 
-                <div className="bg-black/20 p-6 rounded-xl border border-white/10">
-                  <h4 className="font-semibold text-white mb-4">Configuration Loading</h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">1</div>
-                      <p className="text-gray-300"><code>load_script</code> finds current contract's <code>type_hash</code></p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">2</div>
-                      <p className="text-gray-300">Locates cell dep with matching <code>type_hash</code></p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">3</div>
-                      <p className="text-gray-300">Loads cell dep data to obtain global configuration</p>
-                    </div>
+              <div className="bg-black/20 p-4 sm:p-6 rounded-xl border border-white/10">
+                <h4 className="font-semibold text-white mb-4 text-base sm:text-lg">Configuration Loading</h4>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">1</div>
+                    <p className="text-gray-300 text-sm sm:text-base"><code className="text-xs sm:text-sm">load_script</code> finds current contract's <code className="text-xs sm:text-sm">type_hash</code></p>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">2</div>
+                    <p className="text-gray-300 text-sm sm:text-base">Locates cell dep with matching <code className="text-xs sm:text-sm">type_hash</code></p>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">3</div>
+                    <p className="text-gray-300 text-sm sm:text-base">Loads cell dep data to obtain global configuration</p>
                   </div>
                 </div>
               </div>
@@ -234,22 +210,22 @@ outputs:
               <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 p-6 rounded-xl border border-cyan-500/20">
                 <h4 className="font-semibold text-cyan-300 mb-4 text-lg">Verification Steps</h4>
                 <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">1</div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">1</div>
                     <div>
                       <h5 className="font-semibold text-white mb-1">SPV Verification</h5>
                       <p className="text-cyan-200 text-sm">Consult SPV cells to verify Bitcoin transaction existence</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">2</div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">2</div>
                     <div>
                       <h5 className="font-semibold text-white mb-1">Commitment Validation</h5>
                       <p className="text-cyan-200 text-sm">Recalculate and validate commitment against OP_RETURN field</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">3</div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">3</div>
                     <div>
                       <h5 className="font-semibold text-white mb-1">Security Checks</h5>
                       <p className="text-cyan-200 text-sm">Perform additional security validations and integrity checks</p>
@@ -263,13 +239,11 @@ outputs:
                 <p className="text-gray-300 text-sm mb-3">
                   The following figure demonstrates the unlocking process with detailed verification steps and security checks.
                 </p>
-                <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-600/30 overflow-hidden">
-                  <img
-                    src="https://raw.githubusercontent.com/RGBPlusPlus/RGBPlusPlus-design/refs/heads/main/docs/assets/lock-verify.png"
-                    alt="RGB++ Lock Verification Process Diagram"
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
+                <img
+                  src="https://raw.githubusercontent.com/RGBPlusPlus/RGBPlusPlus-design/refs/heads/main/docs/assets/lock-verify.png"
+                  alt="RGB++ Lock Verification Process Diagram"
+                  className="w-full h-auto rounded-lg"
+                />
               </div>
             </CardContent>
           </Card>
@@ -286,7 +260,7 @@ outputs:
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
+                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20 overflow-x-auto">
                   <h4 className="font-semibold text-blue-300 mb-4 flex items-center">
                     <ExternalLink className="h-5 w-5 mr-2" />
                     Design Documentation
@@ -295,7 +269,7 @@ outputs:
                     <Button variant="cyber" effect="shimmer" className="w-full" asChild>
                       <a href="https://github.com/RGBPlusPlus/RGBPlusPlus-design/blob/main/docs/lockscript-design-prd-en.md" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        RGB++ Script Standard (English)
+                        RGB++ Script Standard
                       </a>
                     </Button>
                     <Button variant="cyber" effect="shimmer" className="w-full" asChild>
@@ -307,7 +281,7 @@ outputs:
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 p-6 rounded-xl border border-green-500/20">
+                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 p-6 rounded-xl border border-green-500/20 overflow-x-auto">
                   <h4 className="font-semibold text-green-300 mb-4 flex items-center">
                     <Code className="h-5 w-5 mr-2" />
                     Implementation
@@ -324,7 +298,6 @@ outputs:
               </div>
 
               <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 p-6 rounded-xl border border-yellow-500/20">
-                <h4 className="font-semibold text-yellow-300 mb-3">Additional Information</h4>
                 <p className="text-yellow-200 text-sm leading-relaxed">
                   For a comprehensive understanding of the protocol design, please refer to the RGB++ Script Standard documentation.
                   The complete implementation can be found in the RGB++ Script repository with detailed code examples and deployment instructions.

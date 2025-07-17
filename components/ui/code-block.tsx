@@ -11,11 +11,11 @@ interface CodeBlockProps {
   showLineNumbers?: boolean
 }
 
-export default function CodeBlock({ 
-  children, 
-  language = 'typescript', 
+export default function CodeBlock({
+  children,
+  language = 'typescript',
   className = '',
-  showLineNumbers = false 
+  showLineNumbers = false
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false)
 
@@ -34,7 +34,7 @@ export default function CodeBlock({
       {/* Copy Button */}
       <button
         onClick={handleCopy}
-        className="absolute top-3 right-3 z-10 p-2 rounded-lg bg-gray-800/80 hover:bg-gray-700/80 text-gray-300 hover:text-white transition-all duration-200 opacity-0 group-hover:opacity-100 backdrop-blur-sm border border-gray-600/30"
+        className="absolute top-5 right-6 z-10 p-2 rounded-lg bg-gray-800/80 hover:bg-gray-700/80 text-gray-300 hover:text-white transition-all duration-200 opacity-0 group-hover:opacity-100 backdrop-blur-sm border border-gray-600/30"
         title="Copy code"
       >
         {copied ? (
@@ -54,11 +54,11 @@ export default function CodeBlock({
           borderRadius: '0.75rem',
           fontSize: '0.875rem',
           lineHeight: '1.2',
-        
+
         }}
-       
+
         wrapLines={true}
-        
+
       >
         {children}
       </SyntaxHighlighter>
