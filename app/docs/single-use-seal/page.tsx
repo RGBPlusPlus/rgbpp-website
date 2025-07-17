@@ -168,51 +168,23 @@ export default function SingleUseSealPage() {
           </Card>
         </section>
 
-        {/* Technical Deep Dive */}
+        {/* Further Reading */}
         <section>
           <Card className="bg-white/5 backdrop-blur-xl border-white/10">
             <CardHeader>
-              <CardTitle className="text-white text-2xl">Technical Foundation</CardTitle>
+              <CardTitle className="text-white text-2xl">Further Reading</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
-                <h4 className="font-semibold text-blue-300 mb-4 text-lg">Bitcoin UTXO Properties</h4>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h5 className="font-semibold text-blue-200 mb-3">Inherent Characteristics</h5>
-                    <ul className="text-blue-200 space-y-2">
-                      <li>• <strong>Atomic Spending:</strong> UTXOs can only be spent entirely, never partially</li>
-                      <li>• <strong>Single Use:</strong> Once spent, a UTXO cannot be used again</li>
-                      <li>• <strong>Cryptographic Security:</strong> Protected by Bitcoin's proof-of-work consensus</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-blue-200 mb-3">RGB++ Utilization</h5>
-                    <ul className="text-blue-200 space-y-2">
-                      <li>• <strong>Asset Binding:</strong> RGB++ assets are bound to specific UTXOs</li>
-                      <li>• <strong>Ownership Model:</strong> UTXO ownership equals asset ownership</li>
-                      <li>• <strong>Transfer Mechanism:</strong> Asset transfers require UTXO spending</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 p-6 rounded-xl border border-yellow-500/20">
-                <h4 className="font-semibold text-yellow-300 mb-3 flex items-center">
-                  <ExternalLink className="h-5 w-5 mr-2" />
-                  Further Reading
-                </h4>
-                <p className="text-yellow-200 mb-4">
-                  For a comprehensive explanation of single-use seals and their theoretical foundation,
-                  please refer to Peter Todd's seminal technical article.
-                </p>
-                <a href="https://petertodd.org/2016/state-machine-consensus-building-blocks#uniqueness-and-single-use-seals" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="border-yellow-500/30 text-yellow-300 hover:bg-yellow-500/10">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    State Machine Consensus Building Blocks
-                  </Button>
-                </a>
-              </div>
+            <CardContent>
+              <p className="text-gray-300 mb-4">
+                For a comprehensive explanation of single-use seals and their theoretical foundation,
+                please refer to Peter Todd's seminal technical article.
+              </p>
+              <a href="https://petertodd.org/2016/state-machine-consensus-building-blocks#uniqueness-and-single-use-seals" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 whitespace-normal text-left py-3 px-4 h-auto min-h-[2.5rem] text-sm sm:text-base leading-tight">
+                  <ExternalLink className="h-4 w-4 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="break-words">Building Blocks of the State Machine Approach to Consensus</span>
+                </Button>
+              </a>
             </CardContent>
           </Card>
         </section>

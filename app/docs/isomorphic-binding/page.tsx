@@ -17,10 +17,7 @@ export default function IsomorphicBindingPage() {
           <CardHeader>
             <CardTitle className="flex items-center text-white text-3xl">
               <Link className="h-8 w-8 mr-3 text-purple-400" />
-              Isomorphic Binding
-              <Badge className="ml-4 bg-purple-500/20 text-purple-300 border-purple-500/30">
-                RGB++
-              </Badge>
+              What is Isomorphic Binding?
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -28,6 +25,17 @@ export default function IsomorphicBindingPage() {
               <p className="text-purple-300 leading-relaxed text-lg">
                 A one-to-one mapping mechanism in RGB++ that links Bitcoin UTXOs to CKB Cells, enabling ownership synchronization through Bitcoin's UTXO locks while maintaining state in CKB's Cell data and type fields. This binding allows for Turing-complete Bitcoin UTXO transactions validated by CKB Cells.
               </p>
+            </div>
+
+            {/* Isomorphic Binding Diagram */}
+            <div className="flex justify-center mt-8 mb-6">
+              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 max-w-4xl">
+                <img
+                  src="/isomorphic_binding.svg"
+                  alt="Isomorphic Binding Architecture - One-to-one mapping between Bitcoin UTXOs and CKB Cells"
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
 
             <div className="space-y-4">
