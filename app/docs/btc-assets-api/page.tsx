@@ -66,7 +66,6 @@ export default function BTCAssetsAPIPage() {
                     <li>• Transaction records</li>
                     <li>• Address information</li>
                     <li>• RGB++ asset data</li>
-                    <li>• Network statistics</li>
                   </ul>
                 </div>
               </CardContent>
@@ -91,7 +90,6 @@ export default function BTCAssetsAPIPage() {
                   <ul className="text-green-200 text-xs space-y-1">
                     <li>• Transaction validation</li>
                     <li>• Cross-chain coordination</li>
-                    <li>• Asset transfer processing</li>
                     <li>• Error handling & recovery</li>
                     <li>• Status tracking</li>
                   </ul>
@@ -120,62 +118,11 @@ export default function BTCAssetsAPIPage() {
                     <li>• Queue management</li>
                     <li>• Workflow orchestration</li>
                     <li>• Retry mechanisms</li>
-                    <li>• Performance monitoring</li>
                   </ul>
                 </div>
               </CardContent>
             </Card>
           </div>
-        </section>
-
-        {/* Authentication & Access */}
-        <section>
-          <Card className="bg-white/5 backdrop-blur-xl border-white/10">
-            <CardHeader>
-              <CardTitle className="flex items-center text-white text-2xl">
-                <Shield className="h-7 w-7 mr-3 text-purple-400" />
-                Authentication & Access Control
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-gray-300 leading-relaxed">
-                The btc-assets-api requires an access token for authentication to ensure secure access to Bitcoin and RGB++ asset data and operations.
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 p-6 rounded-xl border border-green-500/20">
-                  <h4 className="font-semibold text-green-300 mb-4 flex items-center">
-                    <Key className="h-5 w-5 mr-2" />
-                    Testnet Access
-                  </h4>
-                  <p className="text-green-200 text-sm leading-relaxed mb-4">
-                    Testnet users can generate a token directly via the /token/generate API endpoint.
-                    The public testnet endpoint is available for development and testing purposes.
-                  </p>
-                  <div className="bg-black/30 p-3 rounded-lg">
-                    <p className="text-green-200 text-xs font-mono">
-                      POST /token/generate
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-6 rounded-xl border border-orange-500/20">
-                  <h4 className="font-semibold text-orange-300 mb-4 flex items-center">
-                    <Shield className="h-5 w-5 mr-2" />
-                    Mainnet Access
-                  </h4>
-                  <p className="text-orange-200 text-sm leading-relaxed mb-4">
-                    Mainnet access is restricted to whitelisted users. Please contact us to request an access token for production use.
-                  </p>
-                  <div className="bg-black/30 p-3 rounded-lg">
-                    <p className="text-orange-200 text-xs">
-                      ⚠️ Whitelisted access required
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </section>
 
         {/* API Endpoints */}
@@ -193,26 +140,26 @@ export default function BTCAssetsAPIPage() {
                 ensuring proper isolation between development and production systems.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
+              <div className="flex flex-col md:grid md:grid-cols-2 gap-6 items-center md:items-stretch px-2 md:px-0">
+                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-4 md:p-6 rounded-xl border border-blue-500/20 w-full max-w-sm md:max-w-none">
                   <h4 className="font-semibold text-blue-300 mb-4 text-lg">Testnet Environments</h4>
                   <div className="space-y-4">
                     <div className="bg-black/30 p-4 rounded-lg">
-                      <h5 className="font-semibold text-white mb-2">Bitcoin Testnet</h5>
-                      <p className="text-blue-200 text-sm font-mono">
+                      <h5 className="font-semibold text-white mb-2">Bitcoin Testnet3</h5>
+                      <p className="text-blue-200 text-sm font-mono break-all">
                         https://api.testnet.rgbpp.io
                       </p>
                     </div>
                     <div className="bg-black/30 p-4 rounded-lg">
                       <h5 className="font-semibold text-white mb-2">Bitcoin Signet</h5>
-                      <p className="text-blue-200 text-sm font-mono">
+                      <p className="text-blue-200 text-sm font-mono break-all">
                         https://api.signet.rgbpp.io
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 p-6 rounded-xl border border-green-500/20">
+                <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 p-4 md:p-6 rounded-xl border border-green-500/20 w-full max-w-sm md:max-w-none">
                   <h4 className="font-semibold text-green-300 mb-4 text-lg">Production Environment</h4>
                   <div className="bg-black/30 p-4 rounded-lg">
                     <h5 className="font-semibold text-white mb-2">Mainnet Access</h5>
@@ -220,121 +167,11 @@ export default function BTCAssetsAPIPage() {
                       For production applications, access instructions are available in the btc-assets-api repository.
                     </p>
                     <a href="https://github.com/RGBPlusPlus/btc-assets-api?tab=readme-ov-file#mainnet" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="border-green-500/30 text-green-300 hover:bg-green-500/10 text-xs">
-                        <ExternalLink className="h-3 w-3 mr-2" />
-                        View Mainnet Instructions
+                      <Button variant="outline" className="border-green-500/30 text-green-300 hover:bg-green-500/10 text-xs px-2 py-1 h-auto leading-tight">
+                        <ExternalLink className="h-3 w-3 mr-1 flex-shrink-0" />
+                        <span className="text-xs whitespace-normal">View Mainnet Instructions</span>
                       </Button>
                     </a>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Integration Guide */}
-        <section>
-          <Card className="bg-white/5 backdrop-blur-xl border-white/10">
-            <CardHeader>
-              <CardTitle className="flex items-center text-white text-2xl">
-                <Settings className="h-7 w-7 mr-3 text-yellow-400" />
-                Integration Guide
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-gray-300 leading-relaxed">
-                Get started with btc-assets-api integration by following these essential steps for both development and production environments.
-              </p>
-
-              <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 p-6 rounded-xl border border-yellow-500/20">
-                <h4 className="font-semibold text-yellow-300 mb-4 text-lg">Integration Steps</h4>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">1</div>
-                    <div>
-                      <h5 className="font-semibold text-white mb-1">Choose Environment</h5>
-                      <p className="text-yellow-200 text-sm">Select testnet for development or request mainnet access for production</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">2</div>
-                    <div>
-                      <h5 className="font-semibold text-white mb-1">Obtain Access Token</h5>
-                      <p className="text-yellow-200 text-sm">Generate testnet token via API or request mainnet whitelist access</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">3</div>
-                    <div>
-                      <h5 className="font-semibold text-white mb-1">Configure SDK</h5>
-                      <p className="text-yellow-200 text-sm">Set up RGB++ SDK with appropriate API endpoints and authentication</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-1">4</div>
-                    <div>
-                      <h5 className="font-semibold text-white mb-1">Start Building</h5>
-                      <p className="text-yellow-200 text-sm">Begin implementing RGB++ asset operations in your application</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Use Cases */}
-        <section>
-          <Card className="bg-white/5 backdrop-blur-xl border-white/10">
-            <CardHeader>
-              <CardTitle className="flex items-center text-white text-2xl">
-                <Database className="h-7 w-7 mr-3 text-purple-400" />
-                Common Use Cases
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6 rounded-xl border border-purple-500/20">
-                  <h4 className="font-semibold text-purple-300 mb-4 text-lg">Application Development</h4>
-                  <div className="space-y-3">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">•</div>
-                      <p className="text-purple-200 text-sm">DeFi applications and protocols</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">•</div>
-                      <p className="text-purple-200 text-sm">NFT marketplaces and platforms</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">•</div>
-                      <p className="text-purple-200 text-sm">Asset management tools</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">•</div>
-                      <p className="text-purple-200 text-sm">Cross-chain protocols</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 p-6 rounded-xl border border-cyan-500/20">
-                  <h4 className="font-semibold text-cyan-300 mb-4 text-lg">Infrastructure Services</h4>
-                  <div className="space-y-3">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">•</div>
-                      <p className="text-cyan-200 text-sm">Exchange integrations</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">•</div>
-                      <p className="text-cyan-200 text-sm">Wallet service backends</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">•</div>
-                      <p className="text-cyan-200 text-sm">Analytics and monitoring</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0 mt-1">•</div>
-                      <p className="text-cyan-200 text-sm">Enterprise solutions</p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -351,50 +188,13 @@ export default function BTCAssetsAPIPage() {
                 Technical Resources
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
-                  <h4 className="font-semibold text-blue-300 mb-4 flex items-center">
-                    <ExternalLink className="h-5 w-5 mr-2" />
-                    Repository & Documentation
-                  </h4>
-                  <div className="space-y-3">
-                    <a href="https://github.com/RGBPlusPlus/btc-assets-api" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                        <GitBranch className="h-4 w-4 mr-2" />
-                        btc-assets-api Repository
-                      </Button>
-                    </a>
-                    <a href="https://github.com/RGBPlusPlus/btc-assets-api#api-documentation" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        API Documentation
-                      </Button>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 p-6 rounded-xl border border-green-500/20">
-                  <h4 className="font-semibold text-green-300 mb-4 flex items-center">
-                    <Network className="h-5 w-5 mr-2" />
-                    Support & Community
-                  </h4>
-                  <div className="space-y-3">
-                    <a href="https://github.com/RGBPlusPlus/btc-assets-api/discussions" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        GitHub Discussions
-                      </Button>
-                    </a>
-                    <a href="https://talk.nervos.org/t/rgb-protocol-light-paper/7733" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="w-full border-green-500/30 text-green-300 hover:bg-green-500/10">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Developer Forum
-                      </Button>
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <CardContent>
+              <a href="https://github.com/RGBPlusPlus/btc-assets-api" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="w-full border-blue-500/30 text-blue-300 hover:bg-blue-500/10">
+                  <GitBranch className="h-4 w-4 mr-2" />
+                  btc-assets-api Repository
+                </Button>
+              </a>
             </CardContent>
           </Card>
         </section>
