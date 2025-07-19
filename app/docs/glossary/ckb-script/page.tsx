@@ -32,36 +32,6 @@ export default function CKBScriptPage() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white">Key Characteristics</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-black/20 p-4 rounded-xl border border-white/10">
-                  <h4 className="font-semibold text-white mb-2">RISC-V Based</h4>
-                  <p className="text-gray-300 text-sm">
-                    Runs on CKB-VM powered by the RISC-V instruction set
-                  </p>
-                </div>
-                <div className="bg-black/20 p-4 rounded-xl border border-white/10">
-                  <h4 className="font-semibold text-white mb-2">Binary Executable</h4>
-                  <p className="text-gray-300 text-sm">
-                    Compiled binary code that executes deterministically on-chain
-                  </p>
-                </div>
-                <div className="bg-black/20 p-4 rounded-xl border border-white/10">
-                  <h4 className="font-semibold text-white mb-2">Arbitrary Logic</h4>
-                  <p className="text-gray-300 text-sm">
-                    Can implement any computation logic to validate transactions
-                  </p>
-                </div>
-                <div className="bg-black/20 p-4 rounded-xl border border-white/10">
-                  <h4 className="font-semibold text-white mb-2">Cell Protection</h4>
-                  <p className="text-gray-300 text-sm">
-                    Guards and protects Cells through validation rules
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">Types of Scripts</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 p-6 rounded-xl border border-yellow-500/20">

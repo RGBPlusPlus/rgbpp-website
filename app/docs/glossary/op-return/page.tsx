@@ -117,31 +117,6 @@ OP_PUSHBYTES_11
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white">Advantages & Considerations</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 p-6 rounded-xl border border-green-500/20">
-                  <h4 className="font-semibold text-green-300 text-lg mb-4">Advantages</h4>
-                  <ul className="text-green-200 text-sm space-y-2">
-                    <li>• Permanent data storage</li>
-                    <li>• Standard transaction type</li>
-                    <li>• Provably unspendable</li>
-                    <li>• Widely supported</li>
-                  </ul>
-                </div>
-
-                <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-6 rounded-xl border border-orange-500/20">
-                  <h4 className="font-semibold text-orange-300 text-lg mb-4">Considerations</h4>
-                  <ul className="text-orange-200 text-sm space-y-2">
-                    <li>• Limited data size (83 bytes)</li>
-                    <li>• Increases blockchain size</li>
-                    <li>• Transaction fees apply</li>
-                    <li>• Not suitable for large data</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">Recent Developments</h3>
               <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 p-6 rounded-xl border border-indigo-500/20">
                 <p className="text-indigo-300 leading-relaxed mb-4">
@@ -161,7 +136,8 @@ OP_PUSHBYTES_11
                 <a href="https://learnmeabitcoin.com/technical/script/return/" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="border-yellow-500/30 text-yellow-300 hover:bg-yellow-500/10">
                     <ExternalLink className="h-4 w-4 mr-2" />
-                    Learn Me A Bitcoin
+                    OP_RETURN
+
                   </Button>
                 </a>
                 <a href="https://github.com/bitcoin/bitcoin/pull/32359" target="_blank" rel="noopener noreferrer">

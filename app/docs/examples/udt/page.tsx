@@ -8,11 +8,11 @@ import { Zap, Code, Wrench, Bitcoin, Network, ArrowRight, ExternalLink, Copy, Ch
 import Link from "next/link"
 import CodeBlock from "@/components/ui/code-block"
 
-export default function QuickStartPage() {
+export default function UDTExamplePage() {
   return (
     <DocLayout
-      title="Quick Start"
-      description="Get up and running with RGB++ Protocol. Learn how to issue, transfer, and manage xUDT tokens using the RGB++ SDK."
+      title="UDT"
+      description="Learn how to issue, transfer, and manage xUDT tokens using the RGB++ SDK through practical examples."
     >
       <div className="space-y-12">
         {/* Prerequisites */}
@@ -384,4 +384,4 @@ export default function QuickStartPage() {
       </div>
     </DocLayout>
   )
-}
+} 

@@ -134,12 +134,14 @@ export default function MMRPage() {
 
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">External Resources</h3>
-              <a href="https://github.com/opentimestamps/opentimestamps-server/blob/master/doc/merkle-mountain-range.md" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="border-pink-500/30 text-pink-300 hover:bg-pink-500/10">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  OpenTimestamps MMR Documentation
-                </Button>
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a href="https://github.com/opentimestamps/opentimestamps-server/blob/master/doc/merkle-mountain-range.md" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-pink-500/30 text-pink-300 hover:bg-pink-500/10 text-xs sm:text-sm px-2 sm:px-3 h-10 sm:h-10">
+                    <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 flex-shrink-0" />
+                    <span className="text-xs sm:text-sm whitespace-normal text-center leading-tight">OpenTimestamps MMR Documentation</span>
+                  </Button>
+                </a>
+              </div>
             </div>
           </CardContent>
         </Card>

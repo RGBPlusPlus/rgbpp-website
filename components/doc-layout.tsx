@@ -42,7 +42,7 @@ const navigationItems = [
   {
     title: "Hands-on Examples",
     items: [
-      { title: "UDT", href: "/docs/quickstart", icon: Zap },
+      { title: "UDT", href: "/docs/examples/udt", icon: Zap },
     ]
   },
   {
@@ -53,7 +53,7 @@ const navigationItems = [
       { title: "CKB Script", href: "/docs/glossary/ckb-script", icon: Layers },
       { title: "xUDT Script", href: "/docs/glossary/xudt-script", icon: Shield },
       { title: "SPV", href: "/docs/glossary/spv", icon: Network },
-      { title: "MMR", href: "/docs/glossary/mmr", icon: Hash },
+      { title: "MMR", href: "/docs/glossary/mmr", icon: Layers },
       { title: "Merkle Root", href: "/docs/glossary/merkle-root", icon: Hash },
       { title: "OP_RETURN", href: "/docs/glossary/op-return", icon: FileText },
     ]

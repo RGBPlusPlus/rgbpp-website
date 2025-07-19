@@ -36,7 +36,7 @@ const navigationItems = [
   {
     title: "Examples",
     items: [
-      { title: "UDT", href: "/docs/quickstart", icon: Zap },
+      { title: "UDT", href: "/docs/examples/udt", icon: Zap },
     ]
   },
   {
@@ -47,7 +47,7 @@ const navigationItems = [
       { title: "CKB Script", href: "/docs/glossary/ckb-script", icon: Layers },
       { title: "xUDT Script", href: "/docs/glossary/xudt-script", icon: Shield },
       { title: "SPV", href: "/docs/glossary/spv", icon: Network },
-      { title: "MMR", href: "/docs/glossary/mmr", icon: Hash },
+      { title: "MMR", href: "/docs/glossary/mmr", icon: Layers },
       { title: "Merkle Root", href: "/docs/glossary/merkle-root", icon: Hash },
       { title: "OP_RETURN", href: "/docs/glossary/op-return", icon: FileText },
     ]
@@ -192,7 +192,7 @@ export default function Header() {
                     {/* Expanded Documentation Menu */}
                     <div className={cn(
                       "overflow-hidden transition-all duration-300 ease-in-out",
-                      expandedSection !== -1 ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                      expandedSection !== -1 ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
                     )}>
                       <div className="mt-3 ml-4 space-y-2">
                         {navigationItems.map((section, sectionIndex) => {
@@ -212,7 +212,7 @@ export default function Header() {
                               </button>
                               <div className={cn(
                                 "overflow-hidden transition-all duration-300 ease-in-out",
-                                isSubExpanded ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+                                isSubExpanded ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
                               )}>
                                 <div className="space-y-1 pt-1">
                                   {section.items.map((item, itemIndex) => {

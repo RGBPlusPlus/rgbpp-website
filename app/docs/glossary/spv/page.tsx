@@ -111,14 +111,14 @@ export default function SPVPage() {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white">External Resources</h3>
               <div className="flex flex-col sm:flex-row gap-3">
-                <a href="https://developer.bitcoin.org/devguide/payment_processing.html#simplified-payment-verification-spv" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="border-indigo-500/30 text-indigo-300 hover:bg-indigo-500/10">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Bitcoin Developer Guide
+                <a href="https://developer.bitcoin.org/devguide/operating_modes.html#simplified-payment-verification-spv" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-indigo-500/30 text-indigo-300 hover:bg-indigo-500/10 text-xs sm:text-sm px-2 sm:px-3 h-10 sm:h-10">
+                    <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 flex-shrink-0" />
+                    <span className="text-xs sm:text-sm whitespace-normal text-center leading-tight">Simplified Payment Verification (SPV)</span>
                   </Button>
                 </a>
                 <a href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="border-gray-500/30 text-gray-300 hover:bg-gray-500/10">
+                  <Button variant="outline" className="border-gray-500/30 text-gray-300 hover:bg-gray-500/10 h-10 sm:h-10">
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Bitcoin Whitepaper
                   </Button>
