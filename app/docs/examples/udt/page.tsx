@@ -110,13 +110,10 @@ export default function UDTExamplePage() {
                   <div>
                     <span className="text-gray-400 text-sm">Testnet3 API:</span>
                     <code className="block text-green-400 font-mono text-sm bg-black/20 p-2 rounded mt-1">
-                      https://api.testnet.rgbpp.io
+                      https://api-testnet.rgbpp.com
                     </code>
-                  </div>
-                  <div>
-                    <span className="text-gray-400 text-sm">Signet API:</span>
-                    <code className="block text-blue-400 font-mono text-sm bg-black/20 p-2 rounded mt-1">
-                      https://api.signet.rgbpp.io
+                    <code className="block text-green-400 font-mono text-sm bg-black/20 p-2 rounded mt-1">
+                      https://api.testnet.rgbpp.io
                     </code>
                   </div>
                 </div>
@@ -142,7 +139,7 @@ export default function UDTExamplePage() {
                   <div>
                     <span className="text-gray-400 text-sm">Access:</span>
                     <div className="mt-1">
-                      <span className="block text-white text-sm mb-2">Restricted to whitelisted users
+                      <span className="block text-white text-sm mb-2">Restricted to whitelisted users.
                         Please contact us at{' '}
                         <a href="mailto:buidl@rgbpp.com" className="text-blue-400 hover:text-blue-300 underline transition-colors text-sm">
                           buidl@rgbpp.com

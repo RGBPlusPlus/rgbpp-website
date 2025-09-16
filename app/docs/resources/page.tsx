@@ -530,29 +530,41 @@ export default function SourceCodePage() {
               </h3>
               <Card className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border-purple-500/20">
                 <CardContent className="p-6">
-                  <p className="text-purple-200 text-sm mb-4">
-                    RGB++ provides dedicated API endpoints for different network environments:
-                  </p>
-                  <div className="grid md:grid-cols-2 gap-4 mb-4">
-                    <div className="space-y-2">
-                      <div className="text-purple-200 text-sm font-medium">Testnet</div>
-                      <code className="bg-black/30 px-3 py-2 rounded text-xs text-purple-100 block">
-                        https://api.testnet.rgbpp.io
-                      </code>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="text-purple-200 text-sm font-medium">Signet</div>
-                      <code className="bg-black/30 px-3 py-2 rounded text-xs text-purple-100 block">
-                        https://api.signet.rgbpp.io
-                      </code>
+                  <div className="space-y-4">
+                    <p className="text-purple-200 text-sm">
+                      RGB++ provides the following Testnet3 API endpoints for development and testing:
+                    </p>
+
+                    <div className="bg-black/20 rounded-lg p-4 border border-purple-500/30">
+                      <div className="flex items-center mb-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                        <div className="text-purple-200 text-sm font-semibold">Testnet3 Endpoints</div>
+                      </div>
+
+                      <div className="space-y-3">
+                        <div className="bg-black/30 px-4 py-3 rounded-lg border border-purple-500/20 hover:border-purple-400/40 transition-colors">
+                          <code className="text-purple-100 text-sm font-mono break-all">
+                            https://api-testnet.rgbpp.com
+                          </code>
+                        </div>
+
+                        <div className="bg-black/30 px-4 py-3 rounded-lg border border-purple-500/20 hover:border-purple-400/40 transition-colors">
+                          <code className="text-purple-100 text-sm font-mono break-all">
+                            https://api.testnet.rgbpp.io
+                          </code>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <p className="text-purple-200 text-xs">
-                    <strong>Mainnet:</strong> For production applications, access instructions are available in the{" "}
-                    <a href="https://github.com/RGBPlusPlus/btc-assets-api?tab=readme-ov-file#mainnet" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-100 underline">
-                      btc-assets-api repository
-                    </a>.
-                  </p>
+                  <div className="mt-4 pt-4 border-t border-purple-500/20">
+                    <p className="text-purple-200 text-sm">
+                      For production applications on <strong>Mainnet</strong>, please refer to the{" "}
+                      <a href="https://github.com/RGBPlusPlus/btc-assets-api?tab=readme-ov-file#mainnet" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-purple-100 underline font-medium">
+                        btc-assets-api repository
+                      </a>{" "}
+                      for endpoint access instructions.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </div>

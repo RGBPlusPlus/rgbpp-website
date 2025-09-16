@@ -147,13 +147,10 @@ export default function BTCAssetsAPIPage() {
                     <div className="bg-black/30 p-4 rounded-lg">
                       <h5 className="font-semibold text-white mb-2">Bitcoin Testnet3</h5>
                       <p className="text-blue-200 text-sm font-mono break-all">
-                        https://api.testnet.rgbpp.io
+                        https://api-testnet.rgbpp.com
                       </p>
-                    </div>
-                    <div className="bg-black/30 p-4 rounded-lg">
-                      <h5 className="font-semibold text-white mb-2">Bitcoin Signet</h5>
-                      <p className="text-blue-200 text-sm font-mono break-all">
-                        https://api.signet.rgbpp.io
+                      <p className="text-blue-200 text-sm font-mono break-all mt-2">
+                        https://api.testnet.rgbpp.io
                       </p>
                     </div>
                   </div>
