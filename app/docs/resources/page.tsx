@@ -66,7 +66,7 @@ export default function SourceCodePage() {
                     <div className="text-xs text-gray-500">Block explorer for RGB++ transactions and assets</div>
                   </div>
                   <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/10 w-32 sm:w-36 min-w-32 px-2 text-xs sm:text-sm flex-shrink-0 justify-center" asChild>
-                    <a href="https://explorer.rgbpp.io/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://explorer.rgbpp.com/en" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-3 w-3 mr-1" />
                       Visit
                     </a>

@@ -100,7 +100,7 @@ export default function Header() {
                 Documentation
               </Link>
               <a
-                href="https://explorer.rgbpp.io/"
+                href="https://explorer.rgbpp.com/en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-orange-400 transition-colors flex items-center space-x-1"
@@ -248,7 +248,7 @@ export default function Header() {
 
                   {/* RGB++ Explorer */}
                   <a
-                    href="https://explorer.rgbpp.io"
+                    href="https://explorer.rgbpp.com/en"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
