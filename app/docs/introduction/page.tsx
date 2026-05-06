@@ -67,6 +67,14 @@ export default function IntroductionPage() {
               </a>
               .
             </p>
+
+            <div className="mt-6 p-4 rounded-lg border border-blue-500/30 bg-blue-500/5">
+              <p className="text-gray-300 text-sm leading-relaxed">
+                <strong className="text-gray-400">Note:</strong>{' '}
+                RGB++ binds Bitcoin UTXOs to CKB Cells via isomorphic binding for enhanced programmability.
+                RGB Protocol (v0.11.1) is a separate Bitcoin-native smart contract system. They are separate protocols that are architecturally unrelated.
+              </p>
+            </div>
           </div>
         </section>
 
