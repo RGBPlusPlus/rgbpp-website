@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Network, Book, Zap, Cpu, FileText, Code, Layers, ArrowLeft, Lock, Shield, Server, Hash, Database, Link as LinkIcon, Menu, X, ChevronDown, ChevronRight } from "lucide-react"
 import Header from "./header"
+import { SHOW_MAINTENANCE_BANNER } from "./maintenance-banner"
 import { DocNavigation } from "./doc-navigation"
 
 interface DocLayoutProps {
@@ -91,8 +92,9 @@ export function DocLayout({ children, title, description }: DocLayoutProps) {
 
         {/* Sidebar */}
         <aside className={cn(
-          " hidden lg:block fixed inset-y-0 left-0 z-50 w-64 h-screen overflow-y-auto bg-gray-900/80 backdrop-blur-sm border-r border-gray-800/30 transition-transform duration-300 ease-in-out",
-          "lg:translate-x-0 top-[76px]",
+          " hidden lg:block fixed inset-y-0 left-0 z-50 w-64 overflow-y-auto bg-gray-900/80 backdrop-blur-sm border-r border-gray-800/30 transition-transform duration-300 ease-in-out",
+          // 维护 banner 显示时，侧边栏需额外下移 banner 的高度 (40px)
+          SHOW_MAINTENANCE_BANNER ? "lg:translate-x-0 top-[116px]" : "lg:translate-x-0 top-[76px]",
           sidebarOpen ? "-translate-x-0" : "-translate-x-full "
         )}>
           <nav className="p-6">

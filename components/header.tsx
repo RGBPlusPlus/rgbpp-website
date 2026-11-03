@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import LogoIcon from "@/components/ui/logoIcon";
+import MaintenanceBanner from "@/components/maintenance-banner";
 import { ExternalLink, Menu, X, Book, Code, Lock, Shield, Link as LinkIcon, Layers, Network, Server, Zap, Hash, Database, FileText, ChevronDown, ChevronRight, Search } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -72,6 +73,7 @@ export default function Header() {
   return (
     <>
       <header className="border-b border-gray-800/50 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
+        <MaintenanceBanner />
         <div className=" mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3 group">
